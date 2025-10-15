@@ -1,0 +1,294 @@
+/* Estilos generales del cuerpo */
+body {
+    background-color: #000000; /* Fondo principal negro */
+    color: #FFFFFF; /* Color de texto principal blanco */
+    font-family: 'Roboto', sans-serif; /* Fuente principal Roboto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el header */
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand-group {
+    display: flex; /* Permite alinear el texto y la imagen en la misma línea */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 5px; /* Agrega un pequeño espacio entre los elementos. Ajusta según necesites. */
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #1E90FF; /* Azul eléctrico */
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #1E90FF,
+                 0 0 10px #1E90FF,
+                 0 0 20px #00BFFF,
+                 0 0 40px #00BFFF;
+    animation: electric-flicker 2s infinite;
+}
+
+/* Animación de parpadeo eléctrico */
+@keyframes electric-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px #1E90FF,
+                     0 0 10px #1E90FF,
+                     0 0 20px #00BFFF,
+                     0 0 40px #00BFFF;
+        color: #1E90FF;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+        color: #0a3d62; /* apagado, casi invisible */
+    }
+}
+
+.form-label {
+  color: #f7f7f8; /* Azul eléctrico */
+}
+.navbar-brand-group .logo {
+    font-family: 'Orbitron', sans-serif; /* Asegura que mantenga la fuente que definiste */
+    font-size: 1.5rem; /* Ajusta si es necesario */
+    color: #1E90FF; /* Color de acento para el texto del logo */
+    text-decoration: none;
+    line-height: 1; /* Para que la altura de línea no cause espacios extra */
+}
+
+.logo-image {
+    height: 105px; /* Ajusta el alto deseado para el logo */
+    width: auto; /* Mantiene la proporción */
+    margin-right: 5px; /* Opcional: para separarlo un poco si va antes del texto */
+    /* Si la imagen va después del texto y quieres que se apegue, puedes usar margin-left: 5px; */
+    vertical-align: middle; /* Alinea la imagen con el texto */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+/* Fondo del menú desplegable */
+.dropdown-menu {
+    background-color: #000;   /* negro */
+    border: 1px solid #1E90FF; /* borde eléctrico opcional */
+}
+
+/* Color de los links dentro del menú */
+.dropdown-item {
+    color: #fff;  /* texto blanco */
+}
+
+/* Hover de los links */
+.dropdown-item:hover {
+    background-color: #000; /* azul eléctrico en hover */
+    color: #000; /* texto negro en hover */
+}
+
+.nav-links a {
+    color: #FFFFFF; /* Texto del menú blanco */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #80f6fa; /* verde neón */
+    text-shadow: 0 0 5px #80f6fa,
+                 0 0 10px #80f6fa,
+                 0 0 20px #80f6fa,
+                 0 0 40px #80f6fa;
+}
+
+/* Estilos de los títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif; /* Fuente de encabezado Orbitron */
+    color: #1E90FF; /* Color Azul Eléctrico */
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Estilos del texto secundario */
+p {
+    color: #D3D3D3; /* Gris Claro para párrafos y descripciones */
+    text-align: center;
+}
+
+/* Estilos del texto secundario para párrafos largos */
+.pl {
+    color: #D3D3D3; /* Gris Claro para párrafos y descripciones */
+    text-align: justify;
+}
+
+/* Estilos del contenido principal */
+.main-content {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+}
+
+/* estilo fotos para carrusel*/
+.d-block{
+    height: 400px;
+    width: 800px;
+    margin: 0px;
+}
+
+.carousel{
+    text-align: center;
+    margin: 0px;
+}
+
+.hero-background {
+    background-image: url('template/assets/img/hero-background.png') !important; /* Cambia esta ruta por la de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Opcional: para un efecto de scroll parallax */
+    min-height: 500px;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+}
+
+.row {
+    display: flex; /* Convierte la fila en un contenedor flexible */
+    flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+    display: flex; /* Hace que las columnas también sean contenedores flexibles */
+    flex-direction: column; /* Organiza el contenido de la columna de forma vertical */
+}
+
+.row > [class*='col-'] .card {
+    flex-grow: 1; /* ¡Esta es la clave! Hace que las tarjetas se estiren para llenar el espacio disponible */
+}
+
+.card.bg-dark {
+    border: 2px solid #1E90FF; /* azul eléctrico */
+    box-shadow: 0 0 10px #1E90FF, 
+                0 0 20px #1E90FF, 
+                0 0 40px #00BFFF;
+    animation: card-flicker 2.5s infinite; /* le damos el efecto eléctrico */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+    border: 2px solid #1E90FF; /* azul eléctrico */
+    box-shadow: 0 0 10px #1E90FF, 
+                0 0 20px #1E90FF, 
+                0 0 40px #00BFFF;
+    animation: card-flicker 2.5s infinite; /* le damos el efecto eléctrico */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary {
+    border: 2px solid #1E90FF; /* azul eléctrico */
+    box-shadow: 0 0 10px #1E90FF, 
+                0 0 20px #1E90FF, 
+                0 0 40px #00BFFF;
+    animation: card-flicker 2.5s infinite; /* le damos el efecto eléctrico */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover, .btn-primary:hover {
+    border-color: #1E90FF; /* verde neón */
+    box-shadow: 0 0 20px #1E90FF, 
+                0 0 40px #1E90FF, 
+                0 0 60px #00BFFF;
+    animation: none; /* en hover queda estable */
+}
+
+.btn-secondary {
+    background-color: #50d0f7; 
+}    
+
+/* efecto al pasar el mouse */
+.card.bg-dark:hover {
+    border-color: #80f6fa; /* verde neón */
+    box-shadow: 0 0 15px #80f6fa, 
+                0 0 30px #80f6fa, 
+                0 0 60px #80f6fa;
+    animation: none; /* en hover queda estable */
+}
+
+
+/* Animación de parpadeo eléctrico en cards */
+@keyframes card-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        border-color: #1E90FF;
+        box-shadow: 0 0 10px #1E90FF, 
+                    0 0 20px #1E90FF, 
+                    0 0 40px #00BFFF;
+    }
+    20%, 24%, 55% {
+        border-color: #0a3d62; /* se apaga */
+        box-shadow: none;
+    }
+}
+
+.categorias{
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 10;
+    display: flex;
+}
+
+.categorias a:hover{
+        color: #80f6fa; /* verde neón */
+    text-shadow: 0 0 5px #80f6fa,
+                 0 0 10px #80f6fa,
+                 0 0 20px #80f6fa,
+                 0 0 40px #80f6fa;
+
+}
+
+/* Clase general para íconos sociales */
+.social-icon {
+    display: inline-block;       /* Para que se comporte como un bloque pequeño */
+    margin: 0 10px;              /* Separación entre iconos */
+    font-size: 32px;             /* Tamaño del icono */
+    color: #fff;                 /* Color inicial blanco */
+    transition: transform 0.2s, color 0.2s; /* Animación suave */
+}
+
+.social-icon:hover {
+    transform: scale(1.4);       /* Agrandar ligeramente al pasar el mouse */
+    color: #80f6fa; /* verde neón */
+    text-shadow: 0 0 5px #80f6fa,
+                 0 0 10px #80f6fa,
+                 0 0 20px #80f6fa,
+                 0 0 40px #80f6fa;
+    
+}
+
+
+.social-icon.whatsapp { color: #1E90FF; }
+.social-icon.instagram { color: #1E90FF; }
+.social-icon.twitch { color: #1E90FF; }
+.social-icon.mercadolibre { color: #1E90FF; }
