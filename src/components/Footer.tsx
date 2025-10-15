@@ -9,7 +9,7 @@ export const Footer = () => {
                 <p>Contáctanos para más información o para una consulta.</p>
                 <a href="contacto.html" className="btn btn-lg btn-primary mt-3">Contáctanos ahora</a>
                 <p></p>
-                <img src="assets/img/mario.gif" alt="Mario saludando" className="img-fluid mt-4" style={{maxWidth: "150px"}}/>
+                <img src="img/mario.gif" alt="Mario saludando" className="img-fluid mt-4" style={{maxWidth: "150px"}}/>
             </div>
             
             <div className="d-flex justify-content-center gap-4 mt-3">
@@ -28,7 +28,7 @@ export const Footer = () => {
             </div>
             
             <p className="text-center">¡Síguenos en nuestras redes sociales!</p>
-        <p>&copy; 2025 Level-UP Gamer. Todos los derechos reservados <img src="assets/img/pixelium.gif" style={{maxWidth: "170px"}}/></p>
+        <p>&copy; 2025 Level-UP Gamer. Todos los derechos reservados <img src="img/pixelium.gif" style={{maxWidth: "170px"}}/></p>
     </footer>
     </>
   )
