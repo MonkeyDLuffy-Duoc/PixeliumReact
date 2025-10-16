@@ -16,7 +16,7 @@ export const Product = () => {
             <a href="#" className="btn btn-primary mt-3">Descubre más</a>
         </div>
 <div className="text-center">
-  <img src="assets/img/todos_voltereta.gif" 
+  <img src="img/todos_voltereta.gif" 
        alt="Gamer haciendo volteretas" 
        className="img-fluid mt-4" 
        style={{maxWidth: "600px", width: "100%", height:"auto"}}/>
@@ -72,7 +72,7 @@ export const Product = () => {
                         <div className="card bg-dark text-white">
                             <div className="card-body">
                                 <h5 className="card-title">Nuevo RPG sorprende con mecánicas innovadoras.</h5>
-                                <img src="assets/img/ER3.webp" alt="Eternal Realms: Awakening" className="img-fluid mb-3"/>
+                                <img src="img/ER3.webp" alt="Eternal Realms: Awakening" className="img-fluid mb-3"/>
                                 <p className="card-text">Eternal Realms: Awakening combina mundo abierto y decisiones que alteran la historia. En pocos días ya superó los 2 millones de descargas.</p>
                                 <a href="noticias.html" className="btn btn-primary">Leer más</a>
                             </div>
@@ -82,7 +82,7 @@ export const Product = () => {
                         <div className="card bg-dark text-white">
                             <div className="card-body">
                                 <h5 className="card-title">Récord en campeonato mundial de eSports</h5>
-                                <img src="assets/img/eSport.webp" alt="World eSports Championship 2025" className="img-fluid mb-3"/>
+                                <img src="img/eSport.webp" alt="World eSports Championship 2025" className="img-fluid mb-3"/>
                                 <p className="card-text">El World eSports Championship 2025 rompió récords con más de 8,5 millones de espectadores. El torneo repartió 15 millones en premios.</p>
                                 <a href="noticias.html" className="btn btn-primary">Leer más</a>
                             </div>
