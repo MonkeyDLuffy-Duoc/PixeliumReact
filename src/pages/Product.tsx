@@ -16,7 +16,7 @@ export const Product = () => {
                         <a href="#" className="btn btn-primary mt-3">Descubre más</a>
                       </div>
                 <div className="text-center">
-                  <img src="img/todos_voltereta.gif" 
+                  <img src="/img/todos_voltereta.gif" 
                       alt="Gamer haciendo volteretas" 
                       className="img-fluid mt-4" 
                       style={{maxWidth: "600px", width: "100%", height:"auto"}}/>

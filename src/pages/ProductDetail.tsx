@@ -18,7 +18,7 @@ export const ProductDetail = () => {
             <a href="#" className="btn btn-primary mt-3">Descubre más</a>
         </div>
         <div className="text-center">
-            <img src="img/todos_voltereta.gif" alt="Gamer haciendo volteretas" className="img-fluid mt-4" style={{maxWidth: "600px"}}/>
+            <img src="/img/todos_voltereta.gif" alt="Gamer haciendo volteretas" className="img-fluid mt-4" style={{maxWidth: "600px"}}/>
         </div>
     </div>
         </div>
@@ -36,11 +36,11 @@ export const ProductDetail = () => {
     <div id="carouselExample" className="carousel slide">
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img className="img-fluid d-block" src="assets/img/mando3.webp.png" style={{maxWidth: "547px"}} alt="..."/>
+      <img className="img-fluid d-block" src={product?.imageSrc} style={{maxWidth: "547px"}} alt="..."/>
     </div>
 
         <div className="carousel-item">
-      <img className="img-fluid d-block" src="assets/img/mando2.webp" style={{maxWidth: "547px"}} alt="..."/>
+      <img className="img-fluid d-block" src={product?.imageSrc2} style={{maxWidth: "547px"}} alt="..."/>
     </div>
 
   </div>
@@ -70,7 +70,7 @@ export const ProductDetail = () => {
                 </div>
     </div>
 </section>
-<div className="container-fluid hero-background pt-2">
+  <div className="container-fluid hero-background pt-2">
         <section className="news-section py-0 bg-transparent text-white mb-0">
             <div className="container-fluid hero-background pt-2">
                 <h2 className="text-center mb-4">Te podría interesar</h2>
@@ -80,7 +80,7 @@ export const ProductDetail = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Silla Gamer Secretlab Titan</h5>
                                 <div className="foto-producto">
-                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/silla gamer.webp" alt="silla gamer"/>
+                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="/img/silla gamer.webp" alt="silla gamer"/>
                                 </div>
                                 <p className="card-text">Descripción breve del producto innovador.</p>
                                 <a href="productos.html" className="btn btn-primary">Ver Producto</a>
@@ -92,7 +92,7 @@ export const ProductDetail = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Play Station 5 slim</h5>
                                  <div className="foto-producto">
-                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/play_5.webp" alt="play_5"/>
+                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="/img/play_5.webp" alt="play_5"/>
                                 </div>
                                 <p className="card-text">Descripción breve de otro producto esencial.</p>
                                 <a href="productos.html" className="btn btn-primary">Ver Producto</a>
@@ -104,7 +104,7 @@ export const ProductDetail = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Auriculares HyperX Cloud II</h5>
                                  <div className="foto-producto">
-                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/HYPERXX.png" alt="Auriculares"/>
+                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="/img/HYPERXX.png" alt="Auriculares"/>
                                 </div>
                                 <p className="card-text">Descripción breve del último lanzamiento.</p>
                                 <a href="productos.html" className="btn btn-primary">Ver Producto</a>

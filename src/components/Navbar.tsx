@@ -10,7 +10,7 @@ export const Navbar = () => {
 
 
       <div className="navbar-brand-group d-flex align-items-center">
-        <img src="img/logo.webp" alt="Logo" className="logo-image"/>
+        <img src="/img/logo.webp" alt="Logo" className="logo-image"/>
         <NavLink to="/" className="logo ms-2">Level-UP Gamer</NavLink>
       <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

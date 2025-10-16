@@ -5,6 +5,9 @@
     category: string;
     price: number;
     imageSrc: string;
+    imageSrc2: string;
+    imageSrc3: string;
+    imageSrc4: string;
 }
 //damos estructura para producto
 
@@ -16,7 +19,10 @@ export const products: Product[] = [
       description: "Un clásico juego de estrategia donde los jugadores compiten por colonizar y expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en familia o con amigos.",
       category: "Juegos de Mesa",
       price: 29990,
-      imageSrc: "/img/catan.jpg" // Usando el código como referencia de imagen
+      imageSrc: "/img/catan.jpg", // Usando el código como referencia de imagen
+      imageSrc2: "/img/catan1.jpg", // Usando el código como referencia de imagen
+      imageSrc3: "/img/catan2.jpg", // Usando el código como referencia de imagen
+      imageSrc4: "/img/catan3.jpg" // Usando el código como referencia de imagen
     },
     {
       id: 2,
@@ -24,7 +30,10 @@ export const products: Product[] = [
       description: "Un juego de colocación de fichas donde los jugadores construyen el paisaje alrededor de la fortaleza medieval de Carcassonne. Ideal para 2-5 jugadores y fácil de aprender.",
       category: "Juegos de Mesa",
       price: 24990,
-      imageSrc: "/img/carcasone.webp"
+      imageSrc: "/img/carcasone.webp",
+      imageSrc2: "/img/carcasone.webp",
+      imageSrc3: "/img/carcasone.webp",
+      imageSrc4: "/img/carcasone.webp"
     },
     {
       id: 3,
@@ -32,7 +41,10 @@ export const products: Product[] = [
       description: "Ofrece una experiencia de juego cómoda con botones mapeables y una respuesta táctil mejorada. Compatible con consolas Xbox y PC.",
       category: "Accesorios",
       price: 59990,
-      imageSrc: "/img/mando xbox.webp"
+      imageSrc: "/img/mando xbox.webp",
+      imageSrc2: "/img/mando1.webp",
+      imageSrc3: "/img/mando1.webp",
+      imageSrc4: "/img/mando1.webp"
     },
     {
       id: 4,
@@ -40,7 +52,10 @@ export const products: Product[] = [
       description: "Proporcionan un sonido envolvente de calidad con un micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad durante largas sesiones de juego.",
       category: "Accesorios",
       price: 79990,
-      imageSrc: "/img/HYPERXX.png"
+      imageSrc: "/img/HYPERXX.png",
+      imageSrc2: "/img/HYPERXX.png",
+      imageSrc3: "/img/HYPERXX.png",
+      imageSrc4: "/img/HYPERXX.png"
     },
     {
       id: 5,
@@ -48,7 +63,10 @@ export const products: Product[] = [
       description: "La consola de última generación de Sony, que ofrece gráficos impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.",
       category: "Consolas",
       price: 549990,
-      imageSrc: "/img/play_5.webp"
+      imageSrc: "/img/play_5.webp",
+      imageSrc2: "/img/HYPERXX.png",
+      imageSrc3: "/img/HYPERXX.png",
+      imageSrc4: "/img/HYPERXX.png"
     },
     {
       id: 6,
@@ -56,7 +74,10 @@ export const products: Product[] = [
       description: "Un potente equipo diseñado para los gamers más exigentes, equipado con los últimos componentes para ofrecer un rendimiento excepcional en cualquier juego.",
       category: "Computadores Gamers",
       price: 1299990,
-      imageSrc: "/img/PC_ASUS.webp"
+      imageSrc: "/img/PC_ASUS.webp",
+      imageSrc2: "/img/HYPERXX.png",
+      imageSrc3: "/img/HYPERXX.png",
+      imageSrc4: "/img/HYPERXX.png"
     },
     {
       id: 7,
@@ -64,7 +85,10 @@ export const products: Product[] = [
       description: "Diseñada para el máximo confort, esta silla ofrece un soporte ergonómico y personalización ajustable para sesiones de juego prolongadas.",
       category: "Sillas Gamers",
       price: 349990,
-      imageSrc: "/img/silla gamer.webp"
+      imageSrc: "/img/silla gamer.webp",
+      imageSrc2: "/img/HYPERXX.png",
+      imageSrc3: "/img/HYPERXX.png",
+      imageSrc4: "/img/HYPERXX.png"
     },
     {
       id: 8,
@@ -72,7 +96,10 @@ export const products: Product[] = [
       description: "Con sensor de alta precisión y botones personalizables, este mouse es ideal para gamers que buscan un control preciso y personalización.",
       category: "Mouse",
       price: 49990,
-      imageSrc: "/img/mouse_gamer.webp"
+      imageSrc: "/img/mouse_gamer.webp",
+      imageSrc2: "/img/HYPERXX.png",
+      imageSrc3: "/img/HYPERXX.png",
+      imageSrc4: "/img/HYPERXX.png"
     },
     {
       id: 9,
@@ -80,7 +107,10 @@ export const products: Product[] = [
       description: "Ofrece un área de juego amplia con iluminación RGB personalizable, asegurando una superficie suave y uniforme para el movimiento del mouse.",
       category: "Mousepad",
       price: 29990,
-      imageSrc: "/img/mousepad.jpg"
+      imageSrc: "/img/mousepad.jpg",
+      imageSrc2: "/img/HYPERXX.png",
+      imageSrc3: "/img/HYPERXX.png",
+      imageSrc4: "/img/HYPERXX.png"
     },
     {
       id: 10,
@@ -88,6 +118,9 @@ export const products: Product[] = [
       description: "Una camiseta cómoda y estilizada, con la posibilidad de personalizarla con tu gamer tag o diseño favorito.",
       category: "Poleras Personalizadas",
       price: 14990,
-      imageSrc: "/img/Camiseta-level.jpg"
+      imageSrc: "/img/Camiseta-level.jpg",
+      imageSrc2: "/img/mousepad.jpg",
+      imageSrc3: "/img/HYPERXX.png",
+      imageSrc4: "/img/HYPERXX.png"
     }
 ]
