@@ -31,7 +31,7 @@ export const ProductDetail = () => {
                  <div className="row text-center">
                     <div className="col-md-12 mb-4">
                         <div className="card bg-dark text-white">
-                             <h5 className="card-title">Controlador Inalámbrico Xbox Series X|S</h5>
+                             <h5 className="card-title">{product?.title}</h5>
 
     <div id="carouselExample" className="carousel slide">
   <div className="carousel-inner">
@@ -54,13 +54,12 @@ export const ProductDetail = () => {
   </button>
 </div>
                             <div className="card-body">
-                                <p className="card-text">Ofrece una experiencia de juego cómoda con
-                                                        botones mapeables y una respuesta táctil mejorada. Compatible con consolas Xbox y PC.</p>
+                                <p className="card-text">{product?.description}</p>
                                 <div className="detalles-producto">
                                 <div className="precio-producto">Precio Completo</div>
-                                <button type="button" className="btn btn-outline-secondary">$79.990</button>
+                                <button type="button" className="btn btn-outline-secondary">{product?.price}</button>
                                 <div className="precio-producto">Precio especial registrados</div>
-                                <button type="button" className="btn btn-outline-primary">$63.992</button>
+                                <button type="button" className="btn btn-outline-primary">${(product?.price)}</button>
                                 <hr/>
                                 </div>
                                 <a href="productos.html" className="btn btn-primary">Agregar al carrito</a>
@@ -71,6 +70,51 @@ export const ProductDetail = () => {
                 </div>
     </div>
 </section>
+<div className="container-fluid hero-background pt-2">
+        <section className="news-section py-0 bg-transparent text-white mb-0">
+            <div className="container-fluid hero-background pt-2">
+                <h2 className="text-center mb-4">Te podría interesar</h2>
+                <div className="row text-center">
+                    <div className="col-md-4 mb-4">
+                        <div className="card bg-dark text-white">
+                            <div className="card-body">
+                                <h5 className="card-title">Silla Gamer Secretlab Titan</h5>
+                                <div className="foto-producto">
+                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/silla gamer.webp" alt="silla gamer"/>
+                                </div>
+                                <p className="card-text">Descripción breve del producto innovador.</p>
+                                <a href="productos.html" className="btn btn-primary">Ver Producto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-4 mb-4">
+                        <div className="card bg-dark text-white">
+                            <div className="card-body">
+                                <h5 className="card-title">Play Station 5 slim</h5>
+                                 <div className="foto-producto">
+                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/play_5.webp" alt="play_5"/>
+                                </div>
+                                <p className="card-text">Descripción breve de otro producto esencial.</p>
+                                <a href="productos.html" className="btn btn-primary">Ver Producto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-4 mb-4">
+                        <div className="card bg-dark text-white">
+                            <div className="card-body">
+                                <h5 className="card-title">Auriculares HyperX Cloud II</h5>
+                                 <div className="foto-producto">
+                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/HYPERXX.png" alt="Auriculares"/>
+                                </div>
+                                <p className="card-text">Descripción breve del último lanzamiento.</p>
+                                <a href="productos.html" className="btn btn-primary">Ver Producto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
     </>
   )
 }
