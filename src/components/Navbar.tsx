@@ -22,11 +22,13 @@ export const Navbar = () => {
 
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0 nav-links">
-          <li className="nav-item dropdown">
+          {/* <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                data-bs-toggle="dropdown" aria-expanded="false">
               Productos
             </a>
+
+            !!!! evaluar uso de estos links !!!
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a className="dropdown-item" href="#">Accesorios</a></li>
               <li><a className="dropdown-item" href="#">Consolas</a></li>
@@ -35,11 +37,12 @@ export const Navbar = () => {
               <li><hr className="dropdown-divider"/></li>
               <li><a className="dropdown-item" href="productos.html">Ver más</a></li>
             </ul>
-          </li>
+          </li> */}
           <li className="nav-item"><NavLink className="nav-link" to="/Noticias">Noticias</NavLink></li>
           <li className="nav-item"><NavLink className="nav-link" to="/Contact">Contacto</NavLink></li>
           <li className="nav-item"><NavLink className="nav-link" to="/Nosotros">Nosotros</NavLink></li>
           <li className="nav-item"><NavLink className="nav-link" to="/Login">Iniciar Sesión</NavLink></li>
+          <li className="nav-item"><NavLink className="nav-link" to="/Products">Productos</NavLink></li>
         </ul>
 
         <form className="d-flex ms-lg-3 mt-2 mt-lg-0">
