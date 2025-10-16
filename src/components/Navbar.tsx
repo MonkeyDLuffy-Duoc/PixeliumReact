@@ -1,5 +1,5 @@
-
-import React from 'react'
+import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export const Navbar = () => {
   return (
@@ -10,8 +10,8 @@ export const Navbar = () => {
 
 
       <div className="navbar-brand-group d-flex align-items-center">
-        <img src="assets/img/logo.webp" alt="Logo" className="logo-image"/>
-        <a href="index.html" className="logo ms-2">Level-UP Gamer</a>
+        <img src="img/logo.webp" alt="Logo" className="logo-image"/>
+        <NavLink to="/" className="logo ms-2">Level-UP Gamer</NavLink>
       <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -36,10 +36,10 @@ export const Navbar = () => {
               <li><a className="dropdown-item" href="productos.html">Ver más</a></li>
             </ul>
           </li>
-          <li className="nav-item"><a className="nav-link" href="noticias.html">Noticias</a></li>
-          <li className="nav-item"><a className="nav-link" href="contacto.html">Contacto</a></li>
-          <li className="nav-item"><a className="nav-link" href="nosotros.html">Nosotros</a></li>
-          <li className="nav-item"><a className="nav-link" href="login.html">Iniciar Sesión</a></li>
+          <li className="nav-item"><NavLink className="nav-link" to="/Noticias">Noticias</NavLink></li>
+          <li className="nav-item"><NavLink className="nav-link" to="/Contact">Contacto</NavLink></li>
+          <li className="nav-item"><NavLink className="nav-link" to="/Nosotros">Nosotros</NavLink></li>
+          <li className="nav-item"><NavLink className="nav-link" to="/Login">Iniciar Sesión</NavLink></li>
         </ul>
 
         <form className="d-flex ms-lg-3 mt-2 mt-lg-0">

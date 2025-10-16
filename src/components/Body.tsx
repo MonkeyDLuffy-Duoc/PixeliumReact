@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 export const Body = () =>{
     return(
         <>
@@ -11,7 +13,7 @@ export const Body = () =>{
                 <h1 className="display-1">Level-UP Gamer</h1>
                     <p className="lead">Tienda de productos gamers creada por gamers!</p>
                 <div className="text-center">
-                    <a href="productos.html" className="btn btn-primary mt-3">Descubre más</a>
+                    <NavLink to="/product" className="btn btn-primary mt-3">Descubre más</NavLink>
                 </div>
             <div className="text-center">
             <img src="/img/todos_voltereta.gif" 

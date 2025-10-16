@@ -1,9 +1,9 @@
+import React from 'react'
 
-export const Contact = () => {
+export const Nosotros = () => {
   return (
     <>
-    <main className="main-content pt-0">
-        <section className="hero-section text-center py-5">
+    <section className="hero-section text-center py-5">
     <div className="container-fluid hero-background">
         <div className="row align-items-center">
     
@@ -13,63 +13,39 @@ export const Contact = () => {
         <div className="text-center">
             <a href="productos.html" className="btn btn-primary mt-3">Descubre más</a>
         </div>
-        <div className="text-center">
-            <img src="img/todos_voltereta.gif" alt="Gamer haciendo volteretas" className="img-fluid mt-4" style={{maxWidth: "600px"}}/>
-        </div>
+<div className="text-center">
+  <img src="img/todos_voltereta.gif" 
+       alt="Gamer haciendo volteretas" 
+       className="img-fluid mt-4" 
+       style={{maxWidth: "600px", width: "100%", height: "auto"}}/>
+</div>
     </div>
         </div>
     </div>
         </section>
-
-        <section id="contacto" className="p-4 bg-ldarkt">
-            <div className="container">
-            <div className="row justify-content-center">
-                <div className="p-4 card bg-dark text-white">
-                    <h2 className="mb-4">Contacto</h2>
-                    <div id="regAlert" className="alert d-none" role="alert"></div>
-                    <form id='formContacto' className="row g-3" noValidate>
-                    <div className="col-12 col-md-6">
-                        <label htmlFor="nombre" className="form-label">Nombre completo</label>
-                        <input type="text" className="form-control" id="ctonombre" name="nombre" placeholder="Elsa Payo" required/> 
-                            
-                        <div className="invalid-feedback">Sólo letras y espacios, máximo 40 caracteres.</div>
+    <section className="us-section">
+            <div className="container py-5 pt-0">
+                <h2 className="text-center mb-2 mt-0">Nosotros</h2>
+                <div className="row text-center py-5 pb-0">
+                    <div className="col-md-12 mb-12">
+                        <div className="card bg-dark text-white">
+                            <div className="card-body">
+                                <h5 className="card-title">Nosotros</h5>
+                                <p className="card-text pl m-4">Level-Up Gamer es una tienda online dedicada a satisfacer las necesidades de los entusiastas de los videojuegos en Chile. Nació hace dos años, en plena pandemia, como respuesta a la creciente demanda de productos gamer en el país. Desde entonces, hemos trabajado constantemente para entregar un catálogo variado que incluye consolas de última generación, accesorios, computadores de alto rendimiento y sillas especializadas.</p>
+                                <p className="card-text pl m-4">A pesar de no contar con una tienda física, nuestros despachos cubren todo el territorio nacional, llegando a miles de hogares de Arica a Punta Arenas. Nuestro compromiso es brindar no solo productos, sino también confianza, rapidez y una experiencia de compra segura y personalizada.</p>
+                                <p className="card-text pl m-4">Lo que nos distingue es nuestra cercanía con la comunidad gamer, manteniéndonos atentos a las últimas tendencias, escuchando las necesidades de nuestros clientes y ofreciendo recomendaciones honestas y actualizadas.</p>
+                                <h5 className="card-title">Nuestra misión</h5>
+                                <p className="card-text pl m-4">Nuestra misión es proporcionar productos de alta calidad a los gamers de todo Chile, entregando una experiencia de compra única y centrada en el cliente. Nos enfocamos en garantizar precios competitivos, un servicio confiable y un acompañamiento cercano para que cada gamer encuentre exactamente lo que necesita.
+                                Más que una tienda, buscamos ser un aliado en la construcción de la comunidad gamer, fomentando espacios de interacción, eventos digitales y consejos para mejorar la experiencia de juego.</p>
+                                <h5 className="card-title">Nuestra visión</h5>
+                                <p className="card-text pl m-4">Nuestra visión es convertirnos en la tienda online líder de productos gamer en Chile, siendo reconocidos por nuestra innovación constante, servicio al cliente excepcional y un sistema de fidelización único basado en gamificación.
+Queremos que cada compra no sea solo una transacción, sino una experiencia que motive a nuestros clientes a seguir siendo parte de la familia Level-Up Gamer, recompensando su lealtad con beneficios, logros y sorpresas exclusivas.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-12 col-md-6">
-                        <label htmlFor="correo" className="form-label">Correo</label>
-                        <input type="email" className="form-control" id="ctocorreo" name="correo" placeholder="hola@example.com" required/>
-                        <div className="invalid-feedback">Debe ser un correo válido @duoc.cl o duoc estudiante</div>
-                    </div>
-
-                    
-                    <div className="col-12 col-md-6">
-                        <label htmlFor="telefono" className="form-label">Teléfono</label>
-                        <input type="tel" className="form-control" id="ctotelefono" name="telefono"
-                            placeholder="+56 9 1234 5678" pattern="^[0-9+\s()-]{8,}$" required/>
-                            <div className="invalid-feedback">Ingresa un teléfono válido (7-15 dígitos/símbolos).</div>
-                    </div>
-                    
-                    <div className="col-12 col-md-6">
-                        <label htmlFor="comuna" className="form-label">Comuna</label>
-                        <select className="form-select" id="comuna" name="comuna" required>
-                        <option value="">Seleccione una comuna</option>
-                        </select>
-                        <div className="invalid-feedback">Selecciona una comuna.</div>
-                    </div>
-                    <div className="col-12">
-                        <label htmlFor="asunto" className="form-label">Asunto</label>
-                        <textarea className="form-control" id="ctoasunto" name="asunto" rows={5} placeholder="Escribe tu mensaje aquí..." required/>
-                        <div className="invalid-feedback">Debes incluir un mensaje de máximo 300 carateres.</div>
-                    </div>
-
-                    <div className="col-12">
-                        <button className="btn btn-primary btn-lg" type="submit"> Enviar</button>
-                    </div>
-                    </form>
                 </div>
-            </div>      
             </div>
         </section>
-
         <div className="container-fluid hero-background pt-2">
         <section className="news-section py-0 bg-transparent text-white mb-0">
             <div className="container-fluid hero-background pt-2">
@@ -115,9 +91,6 @@ export const Contact = () => {
             </div>
         </section>
         </div>
-
-        
-    </main>
     </>
   )
 }
