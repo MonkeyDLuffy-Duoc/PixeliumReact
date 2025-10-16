@@ -1,0 +1,93 @@
+  export type Product = {
+    id: number;
+    title: string;
+    description: string;
+    category: string;
+    price: number;
+    imageSrc: string;
+}
+//damos estructura para producto
+
+export const products: Product[] = [ 	
+    // Lista de productos en formato TypeScript/JSON
+    {
+      id: 1,
+      title: "Catan",
+      description: "Un clásico juego de estrategia donde los jugadores compiten por colonizar y expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en familia o con amigos.",
+      category: "Juegos de Mesa",
+      price: 29990,
+      imageSrc: "/img/JM001.webp" // Usando el código como referencia de imagen
+    },
+    {
+      id: 2,
+      title: "Carcassonne",
+      description: "Un juego de colocación de fichas donde los jugadores construyen el paisaje alrededor de la fortaleza medieval de Carcassonne. Ideal para 2-5 jugadores y fácil de aprender.",
+      category: "Juegos de Mesa",
+      price: 24990,
+      imageSrc: "/img/JM002.webp"
+    },
+    {
+      id: 3,
+      title: "Controlador Inalámbrico Xbox Series X",
+      description: "Ofrece una experiencia de juego cómoda con botones mapeables y una respuesta táctil mejorada. Compatible con consolas Xbox y PC.",
+      category: "Accesorios",
+      price: 59990,
+      imageSrc: "/img/AC001.webp"
+    },
+    {
+      id: 4,
+      title: "Auriculares Gamer HyperX Cloud II",
+      description: "Proporcionan un sonido envolvente de calidad con un micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad durante largas sesiones de juego.",
+      category: "Accesorios",
+      price: 79990,
+      imageSrc: "/img/AC002.webp"
+    },
+    {
+      id: 5,
+      title: "PlayStation 5",
+      description: "La consola de última generación de Sony, que ofrece gráficos impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.",
+      category: "Consolas",
+      price: 549990,
+      imageSrc: "/img/CO001.webp"
+    },
+    {
+      id: 6,
+      title: "PC Gamer ASUS ROG Strix",
+      description: "Un potente equipo diseñado para los gamers más exigentes, equipado con los últimos componentes para ofrecer un rendimiento excepcional en cualquier juego.",
+      category: "Computadores Gamers",
+      price: 1299990,
+      imageSrc: "/img/CG001.webp"
+    },
+    {
+      id: 7,
+      title: "Silla Gamer Secretlab Titan",
+      description: "Diseñada para el máximo confort, esta silla ofrece un soporte ergonómico y personalización ajustable para sesiones de juego prolongadas.",
+      category: "Sillas Gamers",
+      price: 349990,
+      imageSrc: "/img/SG001.webp"
+    },
+    {
+      id: 8,
+      title: "Mouse Gamer Logitech G502 HERO",
+      description: "Con sensor de alta precisión y botones personalizables, este mouse es ideal para gamers que buscan un control preciso y personalización.",
+      category: "Mouse",
+      price: 49990,
+      imageSrc: "/img/MS001.webp"
+    },
+    {
+      id: 9,
+      title: "Mousepad Razer Goliathus Extended Chroma",
+      description: "Ofrece un área de juego amplia con iluminación RGB personalizable, asegurando una superficie suave y uniforme para el movimiento del mouse.",
+      category: "Mousepad",
+      price: 29990,
+      imageSrc: "/img/MP001.webp"
+    },
+    {
+      id: 10,
+      title: "Polera Gamer Personalizada 'Level-Up'",
+      description: "Una camiseta cómoda y estilizada, con la posibilidad de personalizarla con tu gamer tag o diseño favorito.",
+      category: "Poleras Personalizadas",
+      price: 14990,
+      imageSrc: "/img/PP001.webp"
+    }
+]
