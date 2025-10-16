@@ -13,7 +13,7 @@ export const Product = () => {
                   <h1 className="display-1">Level-UP Gamer</h1>
                     <p className="lead">Tienda de productos gamers creada por gamers!</p>
                       <div className="text-center">
-                      <a href="#" className="btn btn-primary mt-3">Descubre más</a>
+                        <a href="#" className="btn btn-primary mt-3">Descubre más</a>
                       </div>
                 <div className="text-center">
                   <img src="img/todos_voltereta.gif" 
@@ -54,7 +54,7 @@ export const Product = () => {
                             </button>
                             <hr/>
                         </div>
-                        <Link className="btn btn-primary" to={`/products/${p.id}`}>Ver Producto</Link>
+                        <Link className="btn btn-primary" to={`/product/${p.id}`}>Ver Producto</Link>
                     </div>
                 </div>
             </div>
