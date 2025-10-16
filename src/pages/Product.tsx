@@ -26,7 +26,7 @@ export const Product = () => {
     </div>
         </section>
 <div className="container">
-    <div className="row text-center">
+    <div className="row text-center g-4">
         {products.map(p => (
             // AÑADIR la 'key' para evitar advertencias de React
             <div key={p.id} className="col-lg-4 col-md-6 col-12">
@@ -34,11 +34,10 @@ export const Product = () => {
                     <div className="card-body">
                         <h5 className="card-title">{p.title}</h5>
                         <div className="foto-producto">
-                            {/* CORREGIR: Usar p.imageSrc en lugar de una imagen estática */}
                             <img 
                                 className="img-fluid rounded" 
                                 style={{maxWidth: "175px"}} 
-                                src={p.imageSrc} // USAR LA RUTA DE IMAGEN DEL PRODUCTO
+                                src={p.imageSrc} 
                                 alt={p.title}
                             />
                         </div>
@@ -55,7 +54,7 @@ export const Product = () => {
                             </button>
                             <hr/>
                         </div>
-                        <a href="ver_producto.html" className="btn btn-primary">Ver Producto</a>
+                        <Link className="btn btn-primary" to={`/products/${p.id}`}>Ver Producto</Link>
                     </div>
                 </div>
             </div>
