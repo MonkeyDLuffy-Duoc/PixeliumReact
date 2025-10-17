@@ -37,12 +37,12 @@ export const ProductDetail = () => {
 <div className="carousel-inner">
   <div className="carousel-item active d-flex justify-content-center">
     <img
-      className="img-fluid"src={product?.imageSrc} style={{ maxWidth: "750px", width: "100%", height: "auto" }} alt="..."/>
+      className="img-fluid"src={product?.imageSrc2} style={{ maxWidth: "750px", width: "100%", height: "auto" }} alt="..."/>
   </div>
 
   <div className="carousel-item d-flex justify-content-center">
     <img
-      className="img-fluid" src={product?.imageSrc2} style={{ maxWidth: "750px", width: "100%", height: "auto" }} alt="..."/>
+      className="img-fluid" src={product?.imageSrc3} style={{ maxWidth: "750px", width: "100%", height: "auto" }} alt="..."/>
   </div>
 </div>
 

@@ -20,8 +20,8 @@ export const products: Product[] = [
       category: "Juegos de Mesa",
       price: 29990,
       imageSrc: "/img/catan.jpg", // Usando el código como referencia de imagen
-      imageSrc2: "/img/catan1.jpg", // Usando el código como referencia de imagen
-      imageSrc3: "/img/catan2.jpg", // Usando el código como referencia de imagen
+      imageSrc2: "/img/catan-detalle-1.png", // Usando el código como referencia de imagen
+      imageSrc3: "/img/catan-detalle-1.png", // Usando el código como referencia de imagen
       imageSrc4: "/img/catan3.jpg" // Usando el código como referencia de imagen
     },
     {
@@ -31,9 +31,9 @@ export const products: Product[] = [
       category: "Juegos de Mesa",
       price: 24990,
       imageSrc: "/img/carcasone.webp",
-      imageSrc2: "/img/carcasone.webp",
-      imageSrc3: "/img/carcasone.webp",
-      imageSrc4: "/img/carcasone.webp"
+      imageSrc2: "/img/carcasone-detalle-1.png",
+      imageSrc3: "/img/carcasone-detalle-2.png",
+      imageSrc4: "/img/carcasone-detalle-1.png"
     },
     {
       id: 3,
@@ -42,9 +42,9 @@ export const products: Product[] = [
       category: "Accesorios",
       price: 59990,
       imageSrc: "/img/mando xbox.webp",
-      imageSrc2: "/img/mando1.webp",
-      imageSrc3: "/img/mando1.webp",
-      imageSrc4: "/img/mando1.webp"
+      imageSrc2: "/img/mando-xbox-detalle-1.png",
+      imageSrc3: "/img/mando-xbox-detalle-1.png",
+      imageSrc4: "/img/mando-xbox-detalle-1.png"
     },
     {
       id: 4,
@@ -52,7 +52,7 @@ export const products: Product[] = [
       description: "Proporcionan un sonido envolvente de calidad con un micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad durante largas sesiones de juego.",
       category: "Accesorios",
       price: 79990,
-      imageSrc: "/img/audifono-detalle.png",
+      imageSrc: "/img/HYPERXX.png",
       imageSrc2: "/img/audifono-detalle.png",
       imageSrc3: "/img/audifono-detalle.png",
       imageSrc4: "/img/audifono-detalle.png"
@@ -63,10 +63,10 @@ export const products: Product[] = [
       description: "La consola de última generación de Sony, que ofrece gráficos impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.",
       category: "Consolas",
       price: 549990,
-      imageSrc: "/img/play-detalle-1.png",
-      imageSrc2: "/img/play-detalle-2.png",
-      imageSrc3: "/img/play_5.webp",
-      imageSrc4: "/img/play_5.webp",
+      imageSrc: "/img/play_5.webp",
+      imageSrc2: "/img/play-detalle-1.png",
+      imageSrc3: "/img/play-detalle-1.png",
+      imageSrc4: "/img/play-detalle-2.png",
     },
     {
       id: 6,
@@ -75,9 +75,9 @@ export const products: Product[] = [
       category: "Computadores Gamers",
       price: 1299990,
       imageSrc: "/img/PC_ASUS.webp",
-      imageSrc2: "/img/HYPERXX.png",
-      imageSrc3: "/img/HYPERXX.png",
-      imageSrc4: "/img/HYPERXX.png"
+      imageSrc2: "/img/pc-asus-detalle-1.png",
+      imageSrc3: "/img/pc-asus-detalle-1.png",
+      imageSrc4: "/img/pc-asus-detalle-1.png"
     },
     {
       id: 7,
@@ -86,8 +86,8 @@ export const products: Product[] = [
       category: "Sillas Gamers",
       price: 349990,
       imageSrc: "/img/silla gamer.webp",
-      imageSrc2: "/img/HYPERXX.png",
-      imageSrc3: "/img/HYPERXX.png",
+      imageSrc2: "/img/silla_detalle_3.png",
+      imageSrc3: "/img/silla_detalle_3.png",
       imageSrc4: "/img/HYPERXX.png"
     },
     {
@@ -97,9 +97,9 @@ export const products: Product[] = [
       category: "Mouse",
       price: 49990,
       imageSrc: "/img/mouse_gamer.webp",
-      imageSrc2: "/img/HYPERXX.png",
-      imageSrc3: "/img/HYPERXX.png",
-      imageSrc4: "/img/HYPERXX.png"
+      imageSrc2: "/img/mouse_detalle_1.png",
+      imageSrc3: "/img/mouse_detalle_1.png",
+      imageSrc4: "/img/mouse_detalle_1.png"
     },
     {
       id: 9,
@@ -108,9 +108,9 @@ export const products: Product[] = [
       category: "Mousepad",
       price: 29990,
       imageSrc: "/img/mousepad.jpg",
-      imageSrc2: "/img/HYPERXX.png",
-      imageSrc3: "/img/HYPERXX.png",
-      imageSrc4: "/img/HYPERXX.png"
+      imageSrc2: "/img/mousepad_detalle_1.jpg",
+      imageSrc3: "/img/mousepad_detalle_1.jpg",
+      imageSrc4: "/img/mousepad_detalle_1.jpg"
     },
     {
       id: 10,
@@ -119,8 +119,8 @@ export const products: Product[] = [
       category: "Poleras Personalizadas",
       price: 14990,
       imageSrc: "/img/Camiseta-level.jpg",
-      imageSrc2: "/img/mousepad.jpg",
-      imageSrc3: "/img/HYPERXX.png",
-      imageSrc4: "/img/HYPERXX.png"
+      imageSrc2: "/img/polera_gamer_detalle_1.png",
+      imageSrc3: "/img/polera_gamer_detalle_1.png",
+      imageSrc4: "/img/polera_gamer_detalle_1.png"
     }
 ]
