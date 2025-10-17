@@ -34,16 +34,18 @@ export const ProductDetail = () => {
                              <h5 className="card-title">{product?.title}</h5>
 
     <div id="carouselExample" className="carousel slide">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img className="img-fluid d-block" src={product?.imageSrc} style={{maxWidth: "547px"}} alt="..."/>
-    </div>
-
-        <div className="carousel-item">
-      <img className="img-fluid d-block" src={product?.imageSrc2} style={{maxWidth: "547px"}} alt="..."/>
-    </div>
-
+<div className="carousel-inner">
+  <div className="carousel-item active d-flex justify-content-center">
+    <img
+      className="img-fluid"src={product?.imageSrc} style={{ maxWidth: "750px", width: "100%", height: "auto" }} alt="..."/>
   </div>
+
+  <div className="carousel-item d-flex justify-content-center">
+    <img
+      className="img-fluid" src={product?.imageSrc2} style={{ maxWidth: "750px", width: "100%", height: "auto" }} alt="..."/>
+  </div>
+</div>
+
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
     <span className="visually-hidden">Previous</span>

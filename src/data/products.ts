@@ -52,10 +52,10 @@ export const products: Product[] = [
       description: "Proporcionan un sonido envolvente de calidad con un micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad durante largas sesiones de juego.",
       category: "Accesorios",
       price: 79990,
-      imageSrc: "/img/HYPERXX.png",
-      imageSrc2: "/img/HYPERXX.png",
-      imageSrc3: "/img/HYPERXX.png",
-      imageSrc4: "/img/HYPERXX.png"
+      imageSrc: "/img/audifono-detalle.png",
+      imageSrc2: "/img/audifono-detalle.png",
+      imageSrc3: "/img/audifono-detalle.png",
+      imageSrc4: "/img/audifono-detalle.png"
     },
     {
       id: 5,
@@ -63,10 +63,10 @@ export const products: Product[] = [
       description: "La consola de última generación de Sony, que ofrece gráficos impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.",
       category: "Consolas",
       price: 549990,
-      imageSrc: "/img/play_5.webp",
-      imageSrc2: "/img/HYPERXX.png",
-      imageSrc3: "/img/HYPERXX.png",
-      imageSrc4: "/img/HYPERXX.png"
+      imageSrc: "/img/play-detalle-1.png",
+      imageSrc2: "/img/play-detalle-2.png",
+      imageSrc3: "/img/play_5.webp",
+      imageSrc4: "/img/play_5.webp",
     },
     {
       id: 6,
