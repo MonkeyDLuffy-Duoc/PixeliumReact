@@ -59,9 +59,11 @@ export const ProductDetail = () => {
                                 <p className="card-text">{product?.description}</p>
                                 <div className="detalles-producto">
                                 <div className="precio-producto">Precio Completo</div>
-                                <button type="button" className="btn btn-outline-secondary">{product?.price}</button>
+                                <button type="button" className="btn btn-outline-secondary">{((product?.price ?? 0)).toLocaleString('es-CL', 
+                                {style: 'currency',currency: 'CLP'})}</button>
                                 <div className="precio-producto">Precio especial registrados</div>
-                                <button type="button" className="btn btn-outline-primary">${(product?.price)}</button>
+                                <button type="button" className="btn btn-outline-primary">{((product?.price ?? 0) * 0.80).toLocaleString('es-CL', 
+                                {style: 'currency',currency: 'CLP'})}</button>
                                 <hr/>
                                 </div>
                                 <a href="productos.html" className="btn btn-primary">Agregar al carrito</a>
