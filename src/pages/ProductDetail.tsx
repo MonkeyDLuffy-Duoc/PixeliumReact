@@ -1,10 +1,48 @@
 import { useParams } from "react-router-dom"
 import { products } from "../data/products";
+import { useCart } from "../context/CartContext";
+import { toast } from "react-hot-toast";
 
 export const ProductDetail = () => {
     const { id } =useParams<{id: string}>();
     const pid =Number(id);
     const product = products.find((p) => p.id === pid);
+    const { addToCart } = useCart();
+    const handleAddToCart = () => {
+      // Nos aseguramos que el producto exista antes de agregarlo
+      if (product) {
+      addToCart(product, 1);
+      
+      toast.success(`${product.title} agregado al carrito!`, {
+        icon: '🛒',
+        
+        // 👇 AQUÍ USAS LA CLASE DE TU index.css
+        className: 'toast-agregado-ok',
+      });
+    }
+  };
+    if (!product) {
+      return (
+        <main className="main-content pt-0">
+      <section className="hero-section py-5"> {/* Quitamos text-center de aquí para alinear el contenido */}
+        <div className="container-fluid hero-background">
+          <div className="container my-4 text-white">
+        <div className="container text-center my-5 text-white">
+          <h1 className="display-4">Error 404</h1>
+          <p className="lead">Producto no encontrado.</p>
+          <div className="text-center">
+          <img src="/img/error.gif" 
+          alt="Gamer haciendo volteretas" 
+          className="img-fluid mt-4" 
+          style={{maxWidth: "300px", width: "100%", height: "auto"}}/>
+          </div>
+        </div>
+            </div>
+        </div>
+        </section>
+        </main>
+      )
+    }
   return (
     <>
     <section className="hero-section text-center py-5">
@@ -66,7 +104,9 @@ export const ProductDetail = () => {
                                 {style: 'currency',currency: 'CLP'})}</button>
                                 <hr/>
                                 </div>
-                                <a href="productos.html" className="btn btn-primary">Agregar al carrito</a>
+                                <button 
+                                    className="btn btn-primary" 
+                                    onClick={handleAddToCart}>Agregar al carrito</button>
                             </div>
                         </div>
                     </div>

@@ -8,6 +8,9 @@ import { Noticias } from "./pages/Noticias";
 import { Nosotros } from "./pages/Nosotros";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
+import { Cart } from "./pages/Cart";
+import { Checkout } from "./pages/Checkout";
+import { OrderSuccess } from "./pages/OrderSuccess";
 
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
       <Route path="/Nosotros" element={<Nosotros/>}/>
       <Route path="/Login" element={<Login/>}/>
       <Route path="/Register" element={<Register/>}/>
+      <Route path="/cart" element={<Cart/>}/>
+      <Route path="/checkout" element={<Checkout/>}/>
+        <Route path="/order-success" element={<OrderSuccess/>}/>
       </Route>
     </Routes>
   )

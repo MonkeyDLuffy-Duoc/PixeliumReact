@@ -1,4 +1,4 @@
-import React from 'react'
+import {Link, NavLink } from "react-router-dom"
 
 export const Noticias = () => {
   return (
@@ -12,7 +12,7 @@ export const Noticias = () => {
         <h1 className="display-1">Level-UP Gamer</h1>
             <p className="lead">Tienda de productos gamers creada por gamers!</p>
         <div className="text-center">
-            <a href="productos.html" className="btn btn-primary mt-3">Descubre más</a>
+            <NavLink to="/Products" className="btn btn-primary mt-3">Descubre más</NavLink>
         </div>
 <div className="text-center">
   <img src="img/todos_voltereta.gif" 
@@ -68,7 +68,7 @@ Más allá de las cifras, lo que marcó el evento fue la enorme participación d
 
         <div className="container-fluid hero-background pt-2">
         <section className="news-section py-0 bg-transparent text-white mb-0">
-            <div className="container hero-background pt-2">
+            <div className="container-fluid hero-background pt-2">
                 <h2 className="text-center mb-4">Te podría interesar</h2>
                 <div className="row text-center">
                     <div className="col-md-4 mb-4">
@@ -79,7 +79,7 @@ Más allá de las cifras, lo que marcó el evento fue la enorme participación d
                                     <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/silla gamer.webp" alt="silla gamer"/>
                                 </div>
                                 <p className="card-text">Descripción breve del producto innovador.</p>
-                                <a href="productos.html" className="btn btn-primary">Ver Producto</a>
+                                <Link to="/product/7" className="btn btn-primary">Ver Producto</Link>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@ Más allá de las cifras, lo que marcó el evento fue la enorme participación d
                                     <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/play_5.webp" alt="play_5"/>
                                 </div>
                                 <p className="card-text">Descripción breve de otro producto esencial.</p>
-                                <a href="productos.html" className="btn btn-primary">Ver Producto</a>
+                                <Link to="/product/5" className="btn btn-primary">Ver Producto</Link>
                             </div>
                         </div>
                     </div>
@@ -100,10 +100,10 @@ Más allá de las cifras, lo que marcó el evento fue la enorme participación d
                             <div className="card-body">
                                 <h5 className="card-title">Auriculares HyperX Cloud II</h5>
                                  <div className="foto-producto">
-                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}}  src="img/HYPERXX.png" alt="Auriculares"/>
+                                    <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/HYPERXX.png" alt="Auriculares"/>
                                 </div>
                                 <p className="card-text">Descripción breve del último lanzamiento.</p>
-                                <a href="productos.html" className="btn btn-primary">Ver Producto</a>
+                                <Link to="/product/4" className="btn btn-primary">Ver Producto</Link>
                             </div>
                         </div>
                     </div>

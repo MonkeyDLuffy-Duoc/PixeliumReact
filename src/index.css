@@ -292,3 +292,50 @@ p {
 .social-icon.instagram { color: #1E90FF; }
 .social-icon.twitch { color: #1E90FF; }
 .social-icon.mercadolibre { color: #1E90FF; }
+
+
+/* RUTA: src/index.css */
+
+/* 1. Define la animación de parpadeo (flicker) */
+@keyframes neon-flicker {
+  /*
+    Estos porcentajes crean un parpadeo errático,
+    como un letrero de neón real.
+  */
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    /* El brillo está "encendido" */
+    /* Usamos el azul primario de tu página (#0d6efd) con transparencia */
+    box-shadow:
+      0 0 6px rgba(13, 110, 253, 0.9),
+      0 0 12px rgba(13, 110, 253, 0.7),
+      0 0 18px rgba(13, 110, 253, 0.5);
+  }
+  
+  20%, 24%, 55% {
+    /* El brillo está "apagado" (el flick) */
+    box-shadow: 
+      0 0 2px rgba(13, 110, 253, 0.2); /* Un brillo muy tenue */
+  }
+}
+
+/* 2. Aplica los estilos a tu clase de toast */
+.toast-agregado-ok {
+  
+  /* --- Colores de la página --- */
+  /* Usamos !important para sobreescribir los estilos de la biblioteca */
+  background-color: #212529 !important; /* 'bg-dark' de Bootstrap */
+  color: #ffffff !important;
+  border: 1px solid #80f6fa; /* Borde azul 'primary' */
+
+  /* --- Tamaño (más grande) --- */
+  font-size: 1.1rem !important;    /* Texto más grande */
+  padding: 20px !important;       /* Más espacio interior */
+  min-width: 650px;               /* Ancho mínimo del toast */
+
+  /* --- Efecto Neón (La magia) --- */
+  animation-name: electric-flicker;  /* Nombre de la animación */
+  animation-duration: 5s;              /* Duración del ciclo de parpadeo */
+  animation-iteration-count: infinite; /* Repetir la animación siempre */
+  animation-timing-function: ease-in-out;
+}
+

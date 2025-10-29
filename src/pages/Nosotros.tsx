@@ -1,5 +1,5 @@
-import React from 'react'
 
+import { Link, NavLink } from 'react-router-dom';
 export const Nosotros = () => {
   return (
     <>
@@ -11,7 +11,7 @@ export const Nosotros = () => {
         <h1 className="display-1">Level-UP Gamer</h1>
             <p className="lead">Tienda de productos gamers creada por gamers!</p>
         <div className="text-center">
-            <a href="productos.html" className="btn btn-primary mt-3">Descubre más</a>
+            <NavLink to="/Products" className="btn btn-primary mt-3">Descubre más</NavLink>
         </div>
 <div className="text-center">
   <img src="img/todos_voltereta.gif" 
@@ -59,7 +59,7 @@ Queremos que cada compra no sea solo una transacción, sino una experiencia que 
                                     <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/silla gamer.webp" alt="silla gamer"/>
                                 </div>
                                 <p className="card-text">Descripción breve del producto innovador.</p>
-                                <a href="productos.html" className="btn btn-primary">Ver Producto</a>
+                                <Link to="/product/7" className="btn btn-primary">Ver Producto</Link>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ Queremos que cada compra no sea solo una transacción, sino una experiencia que 
                                     <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/play_5.webp" alt="play_5"/>
                                 </div>
                                 <p className="card-text">Descripción breve de otro producto esencial.</p>
-                                <a href="productos.html" className="btn btn-primary">Ver Producto</a>
+                                <Link to="/product/5" className="btn btn-primary">Ver Producto</Link>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@ Queremos que cada compra no sea solo una transacción, sino una experiencia que 
                                     <img className="img-fluid rounded" style={{maxWidth: "175px"}} src="img/HYPERXX.png" alt="Auriculares"/>
                                 </div>
                                 <p className="card-text">Descripción breve del último lanzamiento.</p>
-                                <a href="productos.html" className="btn btn-primary">Ver Producto</a>
+                                <Link to="/product/4" className="btn btn-primary">Ver Producto</Link>
                             </div>
                         </div>
                     </div>
