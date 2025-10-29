@@ -11,10 +11,13 @@ import { Register } from "./pages/Register";
 import { Cart } from "./pages/Cart";
 import { Checkout } from "./pages/Checkout";
 import { OrderSuccess } from "./pages/OrderSuccess";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 
 function App() {
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       <Route element={<Layout />}>
       <Route path="/" element={<Home/>}/>
@@ -31,6 +34,7 @@ function App() {
         <Route path="/order-success" element={<OrderSuccess/>}/>
       </Route>
     </Routes>
+    </>
   )
 }
 

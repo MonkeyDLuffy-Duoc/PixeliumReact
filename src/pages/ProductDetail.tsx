@@ -2,12 +2,14 @@ import { useParams } from "react-router-dom"
 import { products } from "../data/products";
 import { useCart } from "../context/CartContext";
 import { toast } from "react-hot-toast";
+import Carousel from 'react-bootstrap/Carousel';
 
 export const ProductDetail = () => {
     const { id } =useParams<{id: string}>();
     const pid =Number(id);
     const product = products.find((p) => p.id === pid);
     const { addToCart } = useCart();
+    
     const handleAddToCart = () => {
       // Nos aseguramos que el producto exista antes de agregarlo
       if (product) {
@@ -71,28 +73,27 @@ export const ProductDetail = () => {
                         <div className="card bg-dark text-white">
                              <h5 className="card-title">{product?.title}</h5>
 
-    <div id="carouselExample" className="carousel slide">
-<div className="carousel-inner">
-  <div className="carousel-item active d-flex justify-content-center">
-    <img
-      className="img-fluid"src={product?.imageSrc2} style={{ maxWidth: "750px", width: "100%", height: "auto" }} alt="..."/>
-  </div>
-
-  <div className="carousel-item d-flex justify-content-center">
-    <img
-      className="img-fluid" src={product?.imageSrc3} style={{ maxWidth: "750px", width: "100%", height: "auto" }} alt="..."/>
-  </div>
-</div>
-
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
+                            <Carousel>
+                              <Carousel.Item>
+                                <div className="d-flex justify-content-center">
+                                  <img
+                                    className="img-fluid"src={product?.imageSrc2} 
+                                    style={{ maxWidth: "750px", width: "100%", height: "auto" }} 
+                                    alt="..."
+                                  />
+                                </div>
+                              </Carousel.Item>
+                              
+                              <Carousel.Item>
+                                <div className="d-flex justify-content-center">
+                                  <img
+                                    className="img-fluid" src={product?.imageSrc3} 
+                                    style={{ maxWidth: "750px", width: "100%", height: "auto" }} 
+                                    alt="..."
+                                  />
+                                </div>
+                              </Carousel.Item>
+                            </Carousel>
                             <div className="card-body">
                                 <p className="card-text">{product?.description}</p>
                                 <div className="detalles-producto">

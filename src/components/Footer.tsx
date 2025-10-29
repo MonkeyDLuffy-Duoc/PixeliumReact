@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faInstagram, faTwitch } from '@fortawesome/free-brands-svg-icons';
 import { faStore } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -10,7 +11,7 @@ export const Footer = () => {
         <div className="container text-center">
           <h2>¿Tienes alguna pregunta?</h2>
           <p>Contáctanos para más información o para una consulta.</p>
-          <a href="contacto.html" className="btn btn-lg btn-primary mt-3">Contáctanos ahora</a>
+          <NavLink to="/Contact" className="btn btn-primary mt-3">Contactanos ahora</NavLink>
           <p></p>
           {/* Asegúrate de que la ruta de la imagen sea correcta en tu proyecto de React */}
           <img src="/img/mario.gif" alt="Mario saludando" className="img-fluid mt-4" style={{ maxWidth: "150px" }} />

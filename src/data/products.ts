@@ -21,8 +21,8 @@ export const products: Product[] = [
       price: 29990,
       imageSrc: "/img/catan.jpg", // Usando el código como referencia de imagen
       imageSrc2: "/img/catan-detalle-1.png", // Usando el código como referencia de imagen
-      imageSrc3: "/img/catan-detalle-1.png", // Usando el código como referencia de imagen
-      imageSrc4: "/img/catan3.jpg" // Usando el código como referencia de imagen
+      imageSrc3: "/img/catan-detalle-2.png", // Usando el código como referencia de imagen
+      imageSrc4: "/img/catan-detalle-3.jpg" // Usando el código como referencia de imagen
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ export const products: Product[] = [
       imageSrc: "/img/carcasone.webp",
       imageSrc2: "/img/carcasone-detalle-1.png",
       imageSrc3: "/img/carcasone-detalle-2.png",
-      imageSrc4: "/img/carcasone-detalle-1.png"
+      imageSrc4: "/img/carcasone-detalle-3.png"
     },
     {
       id: 3,
@@ -43,8 +43,8 @@ export const products: Product[] = [
       price: 59990,
       imageSrc: "/img/mando xbox.webp",
       imageSrc2: "/img/mando-xbox-detalle-1.png",
-      imageSrc3: "/img/mando-xbox-detalle-1.png",
-      imageSrc4: "/img/mando-xbox-detalle-1.png"
+      imageSrc3: "/img/mando-xbox-detalle-2.png",
+      imageSrc4: "/img/mando-xbox-detalle-3.png"
     },
     {
       id: 4,
@@ -53,9 +53,9 @@ export const products: Product[] = [
       category: "Accesorios",
       price: 79990,
       imageSrc: "/img/HYPERXX.png",
-      imageSrc2: "/img/audifono-detalle.png",
-      imageSrc3: "/img/audifono-detalle.png",
-      imageSrc4: "/img/audifono-detalle.png"
+      imageSrc2: "/img/audifono-detalle-1.png",
+      imageSrc3: "/img/audifono-detalle-2.png",
+      imageSrc4: "/img/audifono-detalle-3.png"
     },
     {
       id: 5,
@@ -65,8 +65,8 @@ export const products: Product[] = [
       price: 549990,
       imageSrc: "/img/play_5.webp",
       imageSrc2: "/img/play-detalle-1.png",
-      imageSrc3: "/img/play-detalle-1.png",
-      imageSrc4: "/img/play-detalle-2.png",
+      imageSrc3: "/img/play-detalle-2.png",
+      imageSrc4: "/img/play-detalle-3.png",
     },
     {
       id: 6,
@@ -76,8 +76,8 @@ export const products: Product[] = [
       price: 1299990,
       imageSrc: "/img/PC_ASUS.webp",
       imageSrc2: "/img/pc-asus-detalle-1.png",
-      imageSrc3: "/img/pc-asus-detalle-1.png",
-      imageSrc4: "/img/pc-asus-detalle-1.png"
+      imageSrc3: "/img/pc-asus-detalle-2.png",
+      imageSrc4: "/img/pc-asus-detalle-3.png"
     },
     {
       id: 7,
@@ -86,9 +86,9 @@ export const products: Product[] = [
       category: "Sillas Gamers",
       price: 349990,
       imageSrc: "/img/silla gamer.webp",
-      imageSrc2: "/img/silla_detalle_3.png",
-      imageSrc3: "/img/silla_detalle_3.png",
-      imageSrc4: "/img/HYPERXX.png"
+      imageSrc2: "/img/silla_detalle_1.png",
+      imageSrc3: "/img/silla_detalle_2.png",
+      imageSrc4: "/img/silla_detalle_3.png"
     },
     {
       id: 8,
@@ -98,8 +98,8 @@ export const products: Product[] = [
       price: 49990,
       imageSrc: "/img/mouse_gamer.webp",
       imageSrc2: "/img/mouse_detalle_1.png",
-      imageSrc3: "/img/mouse_detalle_1.png",
-      imageSrc4: "/img/mouse_detalle_1.png"
+      imageSrc3: "/img/mouse_detalle_2.png",
+      imageSrc4: "/img/mouse_detalle_3.png"
     },
     {
       id: 9,
@@ -109,8 +109,8 @@ export const products: Product[] = [
       price: 29990,
       imageSrc: "/img/mousepad.jpg",
       imageSrc2: "/img/mousepad_detalle_1.jpg",
-      imageSrc3: "/img/mousepad_detalle_1.jpg",
-      imageSrc4: "/img/mousepad_detalle_1.jpg"
+      imageSrc3: "/img/mousepad_detalle_2.jpg",
+      imageSrc4: "/img/mousepad_detalle_3.jpg"
     },
     {
       id: 10,
@@ -120,7 +120,7 @@ export const products: Product[] = [
       price: 14990,
       imageSrc: "/img/Camiseta-level.jpg",
       imageSrc2: "/img/polera_gamer_detalle_1.png",
-      imageSrc3: "/img/polera_gamer_detalle_1.png",
-      imageSrc4: "/img/polera_gamer_detalle_1.png"
+      imageSrc3: "/img/polera_gamer_detalle_2.png",
+      imageSrc4: "/img/polera_gamer_detalle_3.png"
     }
 ]
