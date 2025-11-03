@@ -43,7 +43,7 @@ export const products: Product[] = [
       price: 59990,
       imageSrc: "/img/mando xbox.webp",
       imageSrc2: "/img/mando-xbox-detalle-1.png",
-      imageSrc3: "/img/mando-xbox-detalle-2.png",
+      imageSrc3: "/img/mando-xbox-detalle-2.webp",
       imageSrc4: "/img/mando-xbox-detalle-3.png"
     },
     {
