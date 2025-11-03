@@ -43,8 +43,8 @@ export const products: Product[] = [
       price: 59990,
       imageSrc: "/img/mando xbox.webp",
       imageSrc2: "/img/mando-xbox-detalle-1.png",
-      imageSrc3: "/img/mando-xbox-detalle-2.webp",
-      imageSrc4: "/img/mando-xbox-detalle-3.webp"
+      imageSrc3: "/img/mando-xbox-detalle-2.png",
+      imageSrc4: "/img/mando-xbox-detalle-3.png"
     },
     {
       id: 4,
@@ -53,13 +53,8 @@ export const products: Product[] = [
       category: "Accesorios",
       price: 79990,
       imageSrc: "/img/HYPERXX.png",
-<<<<<<< Updated upstream
       imageSrc2: "/img/audifono-detalle.png",
       imageSrc3: "/img/audifono-detalle-2.png",
-=======
-      imageSrc2: "/img/audifono-detalle-1.png",
-      imageSrc3: "/img/audifono-detalle-1.png",
->>>>>>> Stashed changes
       imageSrc4: "/img/audifono-detalle-3.png"
     },
     {
