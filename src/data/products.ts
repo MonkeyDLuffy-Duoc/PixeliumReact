@@ -53,7 +53,7 @@ export const products: Product[] = [
       category: "Accesorios",
       price: 79990,
       imageSrc: "/img/HYPERXX.png",
-      imageSrc2: "/img/audifono-detalle-1.png",
+      imageSrc2: "/img/audifono-detalle.png",
       imageSrc3: "/img/audifono-detalle-2.png",
       imageSrc4: "/img/audifono-detalle-3.png"
     },
@@ -109,7 +109,7 @@ export const products: Product[] = [
       price: 29990,
       imageSrc: "/img/mousepad.jpg",
       imageSrc2: "/img/mousepad_detalle_1.jpg",
-      imageSrc3: "/img/mousepad_detalle_2.jpg",
+      imageSrc3: "/img/mousepad_detalle_2.png",
       imageSrc4: "/img/mousepad_detalle_3.jpg"
     },
     {
