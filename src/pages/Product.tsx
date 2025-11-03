@@ -160,7 +160,8 @@ export const Product = () => {
           */}
           <div className="card-body d-flex flex-column">
             
-            <h5 className="card-title">{p.title}</h5>
+            {/* Aqui arreglamos la variacion de la tarjeta para que quede alineada */}
+            <h5 className="card-title" style={{ minHeight: '3rem' }}>{p.title}</h5> 
             
             {/*
               CAMBIO 3: Damos una altura fija al contenedor de la foto.

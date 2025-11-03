@@ -49,29 +49,13 @@ export const ProductDetail = () => {
     <>
     <section className="hero-section text-center py-5">
     <div className="container-fluid hero-background">
-        <div className="row align-items-center">
-    
-    <div className="col-md-12 text-md-center pt-5">
-        <h1 className="display-1">Level-UP Gamer</h1>
-            <p className="lead">Tienda de productos gamers creada por gamers!</p>
-        <div className="text-center">
-            <a href="#" className="btn btn-primary mt-3">Descubre más</a>
-        </div>
-        <div className="text-center">
-            <img src="/img/todos_voltereta.gif" alt="Gamer haciendo volteretas" className="img-fluid mt-4" style={{maxWidth: "600px"}}/>
-        </div>
-    </div>
-        </div>
-    </div>
-        </section>
-
-    <section className="featured-products py-0">
+        <section className="featured-products py-0">
 
     <div className="container py-5 pt-0">
                  <div className="row text-center">
                     <div className="col-md-12 mb-4">
                         <div className="card bg-dark text-white">
-                             <h5 className="card-title">{product?.title}</h5>
+                             <h1 className="card-title">{product?.title}</h1>
 
                             <Carousel>
                               <Carousel.Item>
@@ -113,9 +97,7 @@ export const ProductDetail = () => {
                     </div>
                     
                 </div>
-    </div>
-</section>
-  <div className="container-fluid hero-background pt-2">
+      <div className="container-fluid hero-background pt-2">
         <section className="news-section py-0 bg-transparent text-white mb-0">
             <div className="container-fluid hero-background pt-2">
                 <h2 className="text-center mb-4">Te podría interesar</h2>
@@ -160,6 +142,13 @@ export const ProductDetail = () => {
             </div>
         </section>
         </div>
+    </div>
+</section>
+    </div>
+        </section>
+
+    
+  
     </>
   )
 }
