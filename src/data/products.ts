@@ -53,7 +53,7 @@ export const products: Product[] = [
       category: "Accesorios",
       price: 79990,
       imageSrc: "/img/HYPERXX.png",
-      imageSrc2: "/img/audifono-detalle.png",
+      imageSrc2: "/img/audifono-detalle-1.png",
       imageSrc3: "/img/audifono-detalle-2.png",
       imageSrc4: "/img/audifono-detalle-3.png"
     },
