@@ -1,4 +1,3 @@
-// 1. IMPORTAMOS 'Link' (además de NavLink)
 import { Link, NavLink } from "react-router-dom"
 
 export const Body = () =>{
@@ -14,7 +13,6 @@ export const Body = () =>{
             <h1 className="display-1">Level-UP Gamer</h1>
                 <p className="lead">Tienda de productos gamers creada por gamers!</p>
             <div className="text-center">
-                {/* Este enlace ya estaba bien con NavLink */}
                 <NavLink to="/Products" className="btn btn-primary mt-3">Descubre más</NavLink>
             </div>
           <div className="text-center">
@@ -41,7 +39,6 @@ export const Body = () =>{
                               <img src="/img/mando xbox.webp" alt="Mando Xbox Series X" className="img-fluid mb-3"/>
                               <p className="card-text">Mando Xbox Series X</p>
                               
-                              {/* 2. CAMBIO AQUÍ: Usamos Link y la ruta del producto */}
                               {/* Asumiendo que el Mando Xbox es el ID 3 de tu products.ts */}
                               <Link to="/product/3" className="btn btn-primary">Ver Producto</Link>
                           </div>
@@ -54,7 +51,7 @@ export const Body = () =>{
                               <img src="/img/silla gamer.webp" alt="Silla Gamer" className="img-fluid mb-3"/>
                               <p className="card-text">Silla ergonomica Secretlab Titan</p>
                               
-                              {/* 3. CAMBIO AQUÍ */}
+
                               {/* Asumiendo que la Silla Secretlab es el ID 7 */}
                               <Link to="/product/7" className="btn btn-primary">Ver Producto</Link>
                           </div>
@@ -67,7 +64,6 @@ export const Body = () =>{
                               <img src="/img/mouse_gamer.webp" alt="Mouse Logitech G502 HERO" className="img-fluid mb-3"/>
                               <p className="card-text">Mouse Logitech G502 HERO</p>
                               
-                              {/* 4. CAMBIO AQUÍ */}
                               {/* Asumiendo que el Mouse G502 es el ID 8 */}
                               <Link to="/product/8" className="btn btn-primary">Ver Producto</Link>
                           </div>
@@ -88,7 +84,7 @@ export const Body = () =>{
                               <img src="/img/ER3.webp" alt="Eternal Realms: Awakening" className="img-fluid mb-3"/>
                               <p className="card-text">Eternal Realms: Awakening combina mundo abierto y decisiones que alteran la historia. En pocos días ya superó los 2 millones de descargas.</p>
                               
-                              {/* 5. CAMBIO AQUÍ: Usamos Link a /Noticias */}
+                              {/* 5. Usamos Link a /Noticias */}
                               <Link to="/Noticias" className="btn btn-primary">Leer más</Link>
                           </div>
                       </div>
@@ -100,7 +96,7 @@ export const Body = () =>{
                               <img src="/img/eSport.webp" alt="World eSports Championship 2025" className="img-fluid mb-3"/>
                               <p className="card-text">El World eSports Championship 2025 rompió récords con más de 8,5 millones de espectadores. El torneo repartió 15 millones en premios.</p>
                               
-                              {/* 6. CAMBIO AQUÍ: Usamos Link a /Noticias */}
+                              {/* 6. Usamos Link a /Noticias */}
                               <Link to="/Noticias" className="btn btn-primary">Leer más</Link>
                           </div>
                       </div>
