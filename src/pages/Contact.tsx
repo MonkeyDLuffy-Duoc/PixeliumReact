@@ -156,13 +156,13 @@ export const Contact = () => {
       </section>
 
       {/* --- SECCIÓN CONTACTO (Modificada) --- */}
-      <section id="contacto" className="p-4 bg-ldarkt"> {/* (Tenías un typo, 'bg-ldarkt', lo dejé por si es intencional) */}
+      <section id="contacto" className="p-4 bg-ldarkt"> 
           <div className="container">
           <div className="row justify-content-center">
               <div className="p-4 card bg-dark text-white">
                   <h2 className="mb-4">Contacto</h2>
                   
-                  {/* El 'div' de alerta se elimina, lo maneja 'react-hot-toast' */}
+                  
                   
                   <form id='formContacto' className="row g-3" noValidate onSubmit={handleSubmit}>
                   
@@ -246,7 +246,7 @@ export const Contact = () => {
           </div>
       </section>
 
-      {/* --- SECCIÓN "TE PODRÍA INTERESAR" (Sin cambios) --- */}
+      
       <div className="container-fluid hero-background pt-2">
       <section className="news-section py-0 bg-transparent text-white mb-0">
           <div className="container-fluid hero-background pt-2">

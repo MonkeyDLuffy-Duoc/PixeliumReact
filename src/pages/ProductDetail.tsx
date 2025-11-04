@@ -11,14 +11,14 @@ export const ProductDetail = () => {
     const { addToCart } = useCart();
     
     const handleAddToCart = () => {
-      // Nos aseguramos que el producto exista antes de agregarlo
+      // aseguramos que el producto exista antes de agregarlo
       if (product) {
       addToCart(product, 1);
       
       toast.success(`${product.title} agregado al carrito!`, {
         icon: '🛒',
         
-        // 👇 AQUÍ USAS LA CLASE DE TU index.css
+        //  LA CLASE DE index.css
         className: 'toast-agregado-ok',
       });
     }

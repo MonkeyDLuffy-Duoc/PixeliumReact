@@ -1,4 +1,4 @@
-// RUTA: src/pages/Login.tsx
+
 
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
@@ -16,7 +16,7 @@ export const Login = () => {
     password: ''
   });
 
-  // 2. DATOS (Igual que en tu JS)
+  // 2. DATOS (Igual que en el JS)
   const usuarios = [
     { correo: "fullstack@duoc.cl", password: "Fullstack@123" }
   ];
@@ -46,7 +46,7 @@ export const Login = () => {
 
     if (hayError) {
       setErrors(newErrors); // Actualiza los errores de los inputs
-      // Mostramos el toast de error con tu GIF
+      // Mostramos el toast de error con el GIF
       toast.error("Por favor completa todos los campos", {
         icon: <img src="/img/error.gif" alt="Error" style={{ width: "60px" }} />
       });
@@ -60,7 +60,7 @@ export const Login = () => {
       // Éxito
       setErrors({ email: '', password: '' }); // Limpiamos errores
       
-      // Mostramos toast de éxito con tu GIF
+      // Mostramos toast de éxito con el GIF
       toast.success("¡Ingreso exitoso!", {
         icon: <img src="/img/check.gif" alt="Éxito" style={{ width: "60px" }} />
       });

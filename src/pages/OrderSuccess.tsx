@@ -6,7 +6,7 @@ export const OrderSuccess = () => {
       <section className="hero-section text-center py-5">
         <div className="container-fluid hero-background">
           <div className="container text-center my-5 text-white">
-            {/* --- CAMBIO AQUÍ: Agregamos la clase 'neon-title-success' --- */}
+            {/* Agregamos la clase 'neon-title-success */}
             <h1 className="logo ms-2 text-white" style={{fontSize: '5rem'}}>¡Pago Exitoso!</h1> 
             
             <img src="/img/check.gif" 

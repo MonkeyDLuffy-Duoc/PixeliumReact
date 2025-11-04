@@ -7,7 +7,7 @@ export const Product = () => {
 
     const [searchParams, setSearchParams] = useSearchParams();
     const searchTerm = searchParams.get('search') || '';
-  // 2. AÑADIR ESTADOS Y LÓGICA DE FILTRADO
+  // ESTADOS Y LÓGICA DE FILTRADO
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [minPrice, setMinPrice] = useState(0);
   // Usamos '' (string vacío) para el precio máximo para un mejor control del input
@@ -42,7 +42,7 @@ export const Product = () => {
     setSelectedCategory("all");
     setMinPrice(0);
     setMaxPrice('');
-    setSearchParams({}); // <--- AÑADIR (Esto limpia el '?search=...' de la URL)
+    setSearchParams({}); // Esto limpia el '?search=...' de la URL
   };
 
   const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +60,6 @@ export const Product = () => {
   return (
     <>
       <main className="main-content pt-0">
-        {/* SECCIÓN HERO (SIN CAMBIOS) */}
         <section className="hero-section text-center py-5">
           <div className="container-fluid hero-background">
             <div className="row align-items-center">
@@ -142,7 +141,7 @@ export const Product = () => {
 
         {/* 6. LISTA DE PRODUCTOS (MODIFICADA) */}
         <div className="container">
-  {/* No hay cambios aquí */}
+  
   <div className="row text-center g-4">
     
     {filteredProducts.map(p => (
@@ -184,7 +183,7 @@ export const Product = () => {
             
             {/*
               CAMBIO 4: Creamos un 'div' con 'mt-auto' (margin-top: auto)
-              Este es el truco: empuja este 'div' (y todo lo que contiene)
+              empuja este 'div' (y todo lo que contiene)
               hasta el fondo absoluto de la tarjeta.
             */}
             <div className="mt-auto">
@@ -224,7 +223,7 @@ export const Product = () => {
           </div>
         </div>
 
-        {/* SECCIÓN DE NOTICIAS (SIN CAMBIOS) */}
+        
         <section className="news-section py-0 bg-transparent text-white mb-0">
           <div className="container-fluid hero-background pt-2">
             <h2 className="text-center mb-4">Últimas Noticias</h2>

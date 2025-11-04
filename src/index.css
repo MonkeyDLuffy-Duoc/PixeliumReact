@@ -185,7 +185,7 @@ p {
 }
 
 .row > [class*='col-'] .card {
-    flex-grow: 1; /* ¡Esta es la clave! Hace que las tarjetas se estiren para llenar el espacio disponible */
+    flex-grow: 1; /* Hace que las tarjetas se estiren para llenar el espacio disponible */
 }
 
 .card.bg-dark {
