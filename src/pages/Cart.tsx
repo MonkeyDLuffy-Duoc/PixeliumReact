@@ -39,10 +39,9 @@ export const Cart = () => {
   return (
     // Añadimos la misma estructura que Login.tsx
     <main className="main-content pt-0">
-      <section className="hero-section py-5"> {/* Quitamos text-center de aquí para alinear el contenido */}
+      <section className="hero-section py-5">
         <div className="container-fluid hero-background">
           <div className="container my-4 text-white">
-            {/* Añadimos text-center solo al título */}
             <h1 className="mb-4 text-center">Tu Carrito de Compras</h1>
 
             <div className="row g-4">
@@ -63,10 +62,8 @@ export const Cart = () => {
                         <div className="card-body">
                           <div className="d-flex justify-content-between">
                             <h5 className="card-title">{item.title}</h5>
-                            {/* --- CAMBIO 1 --- */}
-                            {/* Cambiamos 'btn-outline-danger' por 'btn-outline-secondary' */}
                             <button
-                              className="btn btn-sm btn-outline-secondary" // <-- CAMBIADO
+                              className="btn btn-sm btn-outline-secondary"
                               onClick={() => removeFromCart(item.id)}
                             >
                               <i className="bi bi-trash-fill"></i>
@@ -111,11 +108,8 @@ export const Cart = () => {
                       <Link to="/checkout" className="btn btn-primary btn-lg">
                         Ir a Pagar
                       </Link>
-                      
-                      {/* --- CAMBIO 2 --- */}
-                      {/* Cambiamos 'btn-outline-danger' por 'btn-secondary' */}
                       <button
-                        className="btn btn-secondary" // <-- CAMBIADO
+                        className="btn btn-secondary" 
                         onClick={clearCart}
                       >
                         Vaciar Carrito
