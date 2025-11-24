@@ -1,81 +1,72 @@
 import { Link, NavLink, useSearchParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+// import { products } from "../data/products"; <--- ELIMINAMOS ESTA IMPORTACIÓN ESTÁTICA
+import { useState, useEffect } from "react"; // 1. IMPORTAMOS useEffect
 
-// Interfaz que coincide con tu Backend + las imágenes extra
-interface Producto {
+// 2. Definimos la interfaz del Producto para TypeScript
+interface Product {
   id: number;
   title: string;
   description: string;
   category: string;
   price: number;
-  imageSrc: string;
-  imageSrc2?: string;
-  imageSrc3?: string;
-  imageSrc4?: string;
+  imageSrc: string; // El nombre del archivo en BD (ej: "catan.jpg")
 }
 
 export const Product = () => {
 
-  const IMAGE_URL = "http://localhost:8080/images/"; 
   const [searchParams, setSearchParams] = useSearchParams();
   const searchTerm = searchParams.get('search') || '';
 
-  // 1. ESTADO PARA DATOS DEL BACKEND
-  const [products, setProducts] = useState<Producto[]>([]);
-  const [loading, setLoading] = useState(true);
+  // CAMBIO BACKEND: Estado para almacenar los productos que vienen de la API
+  const [products, setProducts] = useState<Product[]>([]);
 
-  // 2. ESTADOS DE FILTRADO (Tu lógica original)
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(''); // String vacío para permitir "sin límite"
+  // CAMBIO BACKEND: Constantes de URL
+  const API_URL = "http://localhost:8080/api/v1/productos"; // Asegúrate que tu Controller tenga esta ruta
+  const IMAGE_URL = "http://localhost:8080/images/";
 
-  // 3. EFECTO: CARGAR PRODUCTOS DESDE SPRING BOOT
+  // CAMBIO BACKEND: Cargar productos al iniciar
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/productos")
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error cargando productos:", error);
-        setLoading(false);
-      });
+    fetch(API_URL)
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.error("Error cargando productos:", error));
   }, []);
 
-  // 4. LÓGICA DE FILTRADO (Aplicada sobre los datos cargados)
-  
-  // Obtenemos categorías únicas de los productos cargados
+  // ESTADOS Y LÓGICA DE FILTRADO
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(''); 
+
+  // Obtenemos categorías únicas del array de productos
   const categories = ["all", ...new Set(products.map((p) => p.category))];
-  const normalizedSearch = searchTerm.toLowerCase();
+
+  // 3. FILTRAR PRODUCTOS BASADO EN EL ESTADO
+  const normalizedSearch = searchTerm.toLowerCase(); 
 
   const filteredProducts = products.filter((p) => {
-    // --- TU FILTRO DE PRECIO ORIGINAL ---
-    // Si maxPrice está vacío, usamos Infinity, si no, lo convertimos a número
+    // Tus filtros de precio
     const max = maxPrice === '' ? Infinity : Number(maxPrice);
-    
     const priceFilter = p.price >= minPrice && p.price <= max;
     
-    // Filtro de categoría
+    // Tu filtro de categoría
     const categoryFilter = (selectedCategory === "all" || p.category === selectedCategory);
 
-    // Filtro de búsqueda (Buscador)
-    // Agregamos protección (p.title ?) por si algún dato viene nulo de la BD
-    const titleMatch = p.title ? p.title.toLowerCase().includes(normalizedSearch) : false;
-    const descMatch = p.description ? p.description.toLowerCase().includes(normalizedSearch) : false;
-    
-    const searchFilter = searchTerm === '' ? true : (titleMatch || descMatch);
+    // Filtro de búsqueda
+    const searchFilter = searchTerm === '' 
+      ? true 
+      : p.title.toLowerCase().includes(normalizedSearch) || 
+        p.description.toLowerCase().includes(normalizedSearch);
 
-    // El producto debe cumplir TODAS las condiciones
+    // El producto debe cumplir con TODO
     return priceFilter && categoryFilter && searchFilter;
   });
 
-  // 5. MANEJADORES (HANDLERS) ORIGINALES
+  // 4. MANEJADORES PARA ACTUALIZAR EL ESTADO
   const handleReset = () => {
     setSelectedCategory("all");
     setMinPrice(0);
     setMaxPrice('');
-    setSearchParams({}); // Limpia la URL
+    setSearchParams({});
   };
 
   const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -84,10 +75,9 @@ export const Product = () => {
   };
 
   const handleMaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setMaxPrice(e.target.value); // Guardamos como string para permitir borrar el input
+    setMaxPrice(e.target.value);
   };
 
-  if (loading) return <div className="text-center mt-5 text-white"><h2>Cargando inventario...</h2></div>;
 
   return (
     <>
@@ -112,7 +102,7 @@ export const Product = () => {
           </div>
         </section>
 
-        {/* SECCIÓN DE FILTROS */}
+        {/* 5. SECCIÓN DE FILTROS */}
         <div className="container my-4">
           <header className="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 p-3 bg-dark text-white rounded shadow-sm">
             
@@ -136,7 +126,7 @@ export const Product = () => {
               </select>
             </div>
 
-            {/* FILTRO DE PRECIO MIN Y MAX (RESTAURADO) */}
+            {/* FILTRO DE PRECIO MIN Y MAX */}
             <div className="d-flex align-items-center gap-2 flex-wrap">
               <label htmlFor="minPrice" className="form-label mb-0">
                 Mín $
@@ -170,8 +160,10 @@ export const Product = () => {
           </header>
         </div>
 
-        {/* LISTA DE PRODUCTOS */}
+
+        {/* 6. LISTA DE PRODUCTOS */}
         <div className="container">
+  
           <div className="row text-center g-4">
             
             {filteredProducts.map(p => (
@@ -185,12 +177,17 @@ export const Product = () => {
                       className="foto-producto d-flex align-items-center justify-content-center" 
                       style={{ minHeight: '190px' }}
                     >
+                      {/* CAMBIO BACKEND: CONSTRUIMOS LA URL DE LA IMAGEN */}
                       <img 
                         className="img-fluid rounded" 
                         style={{ maxHeight: "175px", width: "auto", objectFit: 'contain' }} 
-                        src={ IMAGE_URL} 
+                        // Aquí unimos http://.../images/ con "catan.jpg"
+                        src={`${IMAGE_URL}${p.imageSrc}`} 
                         alt={p.title}
-                        onError={(e) => {e.currentTarget.src = '/img/placeholder.png'}} // Fallback si falla la imagen
+                        // Añadimos un fallback por si la imagen falla
+                        onError={(e) => {
+                           (e.target as HTMLImageElement).src = "/img/error.gif"; 
+                        }}
                       />
                     </div>
                     
@@ -216,15 +213,15 @@ export const Product = () => {
               </div>
             ))}
 
-            {/* MENSAJE SIN RESULTADOS */}
+            {/* 7. MENSAJE SI NO HAY RESULTADOS */}
             {filteredProducts.length === 0 && (
               <div className="col-12 text-center text-white">
                 <h3 className="my-5">Sin resultados</h3>
                 <div className="text-center">
                 <img src="/img/error.gif" 
-                  alt="Error" 
-                  className="img-fluid mt-4" 
-                  style={{maxWidth: "300px", width: "100%", height: "auto"}}/>
+                alt="Gamer haciendo volteretas" 
+                className="img-fluid mt-4" 
+                style={{maxWidth: "300px", width: "100%", height: "auto"}}/>
                 </div>
                 <h5 className="my-5">No se encontraron productos que coincidan con los filtros seleccionados.</h5>
               </div>
@@ -233,7 +230,7 @@ export const Product = () => {
           </div>
         </div>
 
-        {/* NOTICIAS (Estáticas) */}
+        {/* Sección de noticias estática (sin cambios) */}
         <section className="news-section py-0 bg-transparent text-white mb-0">
           <div className="container-fluid hero-background pt-2">
             <h2 className="text-center mb-4">Últimas Noticias</h2>
@@ -242,9 +239,9 @@ export const Product = () => {
                         <div className="card bg-dark text-white">
                             <div className="card-body">
                                 <h5 className="card-title">Nuevo RPG sorprende con mecánicas innovadoras.</h5>
-                                <img src="/img/ER3.webp" alt="Eternal Realms" className="img-fluid mb-3"/>
-                                <p className="card-text">Eternal Realms: Awakening combina mundo abierto y decisiones que alteran la historia.</p>
-                                <a href="#" className="btn btn-primary">Leer más</a>
+                                <img src="/img/ER3.webp" alt="Eternal Realms: Awakening" className="img-fluid mb-3"/>
+                                <p className="card-text">Eternal Realms: Awakening combina mundo abierto y decisiones que alteran la historia. En pocos días ya superó los 2 millones de descargas.</p>
+                                <a href="noticias.html" className="btn btn-primary">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -252,9 +249,9 @@ export const Product = () => {
                         <div className="card bg-dark text-white">
                             <div className="card-body">
                                 <h5 className="card-title">Récord en campeonato mundial de eSports</h5>
-                                <img src="/img/eSport.webp" alt="eSports" className="img-fluid mb-3"/>
-                                <p className="card-text">El World eSports Championship 2025 rompió récords con más de 8,5 millones de espectadores.</p>
-                                <a href="#" className="btn btn-primary">Leer más</a>
+                                <img src="/img/eSport.webp" alt="World eSports Championship 2025" className="img-fluid mb-3"/>
+                                <p className="card-text">El World eSports Championship 2025 rompió récords con más de 8,5 millones de espectadores. El torneo repartió 15 millones en premios.</p>
+                                <a href="noticias.html" className="btn btn-primary">Leer más</a>
                             </div>
                         </div>
                     </div>
