@@ -16,6 +16,7 @@ interface Producto {
 
 export const Product = () => {
 
+  const IMAGE_URL = "http://localhost:8080/images/"; 
   const [searchParams, setSearchParams] = useSearchParams();
   const searchTerm = searchParams.get('search') || '';
 
@@ -187,7 +188,7 @@ export const Product = () => {
                       <img 
                         className="img-fluid rounded" 
                         style={{ maxHeight: "175px", width: "auto", objectFit: 'contain' }} 
-                        src={p.imageSrc} 
+                        src={ IMAGE_URL} 
                         alt={p.title}
                         onError={(e) => {e.currentTarget.src = '/img/placeholder.png'}} // Fallback si falla la imagen
                       />
