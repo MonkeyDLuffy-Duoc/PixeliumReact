@@ -14,6 +14,7 @@ import { OrderSuccess } from "./pages/OrderSuccess";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { CrearNoticia } from "./components/CrearNoticias";
 import { CrearProducto } from "./components/CrearProducto";
+import { Perfil } from "./pages/Perfil";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Route path="/Noticias" element={<Noticias/>}/>
       <Route path="/Nosotros" element={<Nosotros/>}/>
       <Route path="/Login" element={<Login/>}/>
+      <Route path="/Perfil" element={<Perfil/>}/>
       <Route path="/Register" element={<Register/>}/>
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/admin/crear-producto" element={<CrearProducto />} />

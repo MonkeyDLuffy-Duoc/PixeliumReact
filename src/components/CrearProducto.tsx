@@ -83,7 +83,7 @@ export const CrearProducto = () => {
             <div className="row justify-content-center">
                 <div className="col-md-8">
                     <div className="card bg-dark text-white shadow-lg border-primary">
-                        <div className="card-header bg-primary text-white">
+                        <div className="card-header">
                             <h3 className="mb-0">Agregar Nuevo Producto</h3>
                         </div>
                         <div className="card-body">
