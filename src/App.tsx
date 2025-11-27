@@ -15,6 +15,7 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { CrearNoticia } from "./components/CrearNoticias";
 import { CrearProducto } from "./components/CrearProducto";
 import { Perfil } from "./pages/Perfil";
+import { ProtectedRoute } from "./components/ProtectedRoute"; // 1. Importamos la protección
 
 function App() {
   return (
@@ -22,20 +23,39 @@ function App() {
     <ScrollToTop />
     <Routes>
       <Route element={<Layout />}>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/home" element={<Home/>}/>
-      <Route path="/products" element={<Product/>}/>
-      <Route path="/product/:id" element={<ProductDetail/>}/>
-      <Route path="/Contact" element={<Contact/>}/>
-      <Route path="/Noticias" element={<Noticias/>}/>
-      <Route path="/Nosotros" element={<Nosotros/>}/>
-      <Route path="/Login" element={<Login/>}/>
-      <Route path="/Perfil" element={<Perfil/>}/>
-      <Route path="/Register" element={<Register/>}/>
-      <Route path="/cart" element={<Cart/>}/>
-      <Route path="/admin/crear-producto" element={<CrearProducto />} />
-      <Route path="/admin/crear-noticia" element={<CrearNoticia />} />
-      <Route path="/checkout" element={<Checkout/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/products" element={<Product/>}/>
+        <Route path="/product/:id" element={<ProductDetail/>}/>
+        <Route path="/Contact" element={<Contact/>}/>
+        <Route path="/Noticias" element={<Noticias/>}/>
+        <Route path="/Nosotros" element={<Nosotros/>}/>
+        <Route path="/Login" element={<Login/>}/>
+        
+        {/* 2. Protegemos el Perfil (Solo usuarios logueados) */}
+        <Route path="/Perfil" element={
+          <ProtectedRoute>
+            <Perfil/>
+          </ProtectedRoute>
+        }/>
+        
+        <Route path="/Register" element={<Register/>}/>
+        <Route path="/cart" element={<Cart/>}/>
+        
+        {/* 3. Protegemos Rutas de Admin (Solo rol ADMIN) */}
+        <Route path="/admin/crear-producto" element={
+          <ProtectedRoute requiredRole="ADMIN">
+            <CrearProducto />
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/admin/crear-noticia" element={
+          <ProtectedRoute requiredRole="ADMIN">
+            <CrearNoticia />
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/checkout" element={<Checkout/>}/>
         <Route path="/order-success" element={<OrderSuccess/>}/>
       </Route>
     </Routes>

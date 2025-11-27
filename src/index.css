@@ -44,6 +44,19 @@ body {
     animation: electric-flicker 2s infinite;
 }
 
+.logo-403 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 6rem;
+    color: #1E90FF; /* Azul eléctrico */
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #1E90FF,
+                 0 0 10px #1E90FF,
+                 0 0 20px #00BFFF,
+                 0 0 40px #00BFFF;
+    animation: electric-flicker-403 2s infinite;
+}
+
 /* Animación de parpadeo eléctrico */
 @keyframes electric-flicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
@@ -56,6 +69,20 @@ body {
     20%, 24%, 55% {
         text-shadow: none;
         color: #0a3d62; /* apagado, casi invisible */
+    }
+}
+
+@keyframes electric-flicker-403 {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px #7c0011,
+                     0 0 10px #f02c36,
+                     0 0 20px #ff7190,
+                     0 0 40px #fc5f5f;
+        color: #e60c0c;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+        color: #721111; /* apagado, casi invisible */
     }
 }
 
@@ -196,6 +223,8 @@ p {
     animation: card-flicker 2.5s infinite; /* le damos el efecto eléctrico */
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
+
+
 
 .btn-primary {
     border: 2px solid #1E90FF; /* azul eléctrico */
@@ -338,4 +367,15 @@ p {
   animation-iteration-count: infinite; /* Repetir la animación siempre */
   animation-timing-function: ease-in-out;
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
 

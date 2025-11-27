@@ -27,17 +27,20 @@ export const Login = () => {
       const response = await fetch("http://localhost:8080/api/v1/usuarios/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        // Enviamos 'correo' porque así lo espera el DTO LoginRequest en Java
         body: JSON.stringify({ correo: email, password: password })
       });
 
       if (response.ok) {
-        const usuario = await response.json();
+        // AHORA RECIBIMOS UN OBJETO CON { token, usuario }
+        const data = await response.json(); 
         
-        // OPCIONAL: Guardar usuario en localStorage para saber que está logueado
-        localStorage.setItem("usuario", JSON.stringify(usuario));
+        // 1. Guardamos el token para futuras peticiones seguras
+        localStorage.setItem("token", data.token);
 
-        toast.success(`¡Bienvenido ${usuario.nombre}!`, {
+        // 2. Guardamos los datos del usuario para el perfil y navbar
+        localStorage.setItem("usuario", JSON.stringify(data.usuario));
+
+        toast.success(`¡Bienvenido ${data.usuario.nombre}!`, {
             icon: <img src="/img/check.gif" alt="Éxito" style={{ width: "60px" }} />
         });
         
