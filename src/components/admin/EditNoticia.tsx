@@ -146,7 +146,7 @@ export const EditNoticia = ({ noticia, onSuccess, onCancel }: EditNoticiaProps) 
                       src={imagePreview}
                       alt="Preview"
                       className="img-fluid rounded mb-3"
-                      style={{ maxHeight: '200px', objectFit: 'cover' }}
+                      style={{ maxHeight: '150px', objectFit: 'cover' }}
                     />
                   </div>
                 )}
