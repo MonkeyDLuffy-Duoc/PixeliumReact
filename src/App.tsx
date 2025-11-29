@@ -12,10 +12,9 @@ import { Cart } from "./pages/Cart";
 import { Checkout } from "./pages/Checkout";
 import { OrderSuccess } from "./pages/OrderSuccess";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { CrearNoticia } from "./components/CrearNoticias";
-import { CrearProducto } from "./components/CrearProducto";
 import { Perfil } from "./pages/Perfil";
 import { ProtectedRoute } from "./components/ProtectedRoute"; // 1. Importamos la protección
+import { AdminDashboard } from "./components/admin/AdminDashboard";
 
 function App() {
   return (
@@ -42,18 +41,11 @@ function App() {
         <Route path="/Register" element={<Register/>}/>
         <Route path="/cart" element={<Cart/>}/>
         
-        {/* 3. Protegemos Rutas de Admin (Solo rol ADMIN) */}
-        <Route path="/admin/crear-producto" element={
+        <Route path="/admin/admin-dashboard" element={
           <ProtectedRoute requiredRole="ADMIN">
-            <CrearProducto />
-          </ProtectedRoute>
-        } />
-        
-        <Route path="/admin/crear-noticia" element={
-          <ProtectedRoute requiredRole="ADMIN">
-            <CrearNoticia />
-          </ProtectedRoute>
-        } />
+            <AdminDashboard/>
+            </ProtectedRoute>}
+        />
         
         <Route path="/checkout" element={<Checkout/>}/>
         <Route path="/order-success" element={<OrderSuccess/>}/>

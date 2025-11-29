@@ -140,24 +140,7 @@ export const Navbar = () => {
                                 
                                 {/* --- ADMIN PANEL (Asegúrate de que user.role sea 'ADMIN') --- */}
                                 {user && user.role === 'ADMIN' && (
-                                    <li className="nav-item dropdown">
-                                        <a 
-                                            className={`nav-link dropdown-toggle ${isAdminOpen ? 'show' : ''}`} 
-                                            href="#" 
-                                            role="button" 
-                                            onClick={(e) => {
-                                            e.preventDefault();
-                                            setIsAdminOpen(!isAdminOpen);
-                                            }}
-                                            aria-expanded={isAdminOpen}
-                                        >
-                                            Admin Panel
-                                        </a>
-                                        <ul className={`dropdown-menu dropdown-menu-dark ${isAdminOpen ? 'show' : ''}`} style={{ right: 0, left: 'auto' }}>
-                                            <li><NavLink className="dropdown-item" to="/admin/crear-noticia" onClick={closeMenu}>Crear Noticia</NavLink></li>
-                                            <li><NavLink className="dropdown-item" to="/admin/crear-producto" onClick={closeMenu}>Crear Producto</NavLink></li>
-                                        </ul>
-                                    </li>
+                                    <li className="nav-item"><NavLink className="nav-link" to="/admin/admin-dashboard">Administrar</NavLink></li>
                                 )}
 
                                 {/* --- LOGIN / LOGOUT DINÁMICO --- */}
