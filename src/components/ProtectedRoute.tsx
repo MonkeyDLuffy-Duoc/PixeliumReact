@@ -13,7 +13,23 @@ export const ProtectedRoute = ({ children, requiredRole }: ProtectedRouteProps) 
 
     // 1. Si no hay usuario logueado -> Login
     if (!user) {
-        return <Navigate to="/login" replace />;
+        return (
+            <main className="main-content pt-0">
+                <section className="hero-section text-center py-5">
+                    <div className="container-fluid hero-background d-flex align-items-center justify-content-center" style={{minHeight: "80vh"}}>
+                        <div className="card bg-dark text-white p-5">
+                            <h1 className="logo-403 display-1 text-danger fw-bold">404</h1>
+                            <h2 className="logo mb-4">Contenido no encontrado</h2>
+                            <p className="logo lead">Lo sentimos, su contenido está en otro castillo</p>
+                            <img src="/img/mario404.gif" alt="Access Denied" className="img-fluid mx-auto my-3" style={{maxWidth: "500px"}}/>
+                            <div className="mt-4">
+                                <a href="/" className=" btn btn-primary">Volver al Inicio</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        );
     }
 
     // 2. Si se requiere rol y el usuario no lo tiene -> 403 FORBIDDEN
