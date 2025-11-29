@@ -21,8 +21,16 @@ export const ProtectedRoute = ({ children, requiredRole }: ProtectedRouteProps) 
                             <h1 className="logo-403 display-1 text-danger fw-bold">404</h1>
                             <h2 className="logo mb-4">Contenido no encontrado</h2>
                             <p className="logo lead">Lo sentimos, su contenido está en otro castillo</p>
-                            <img src="/img/mario404.gif" alt="Access Denied" className="img-fluid mx-auto my-3" style={{maxWidth: "500px"}}/>
-                            <div className="mt-4">
+                            <img 
+                            src="/img/mario404.gif" 
+                            alt="Access Denied" 
+                            className="img-fluid mx-auto my-3" 
+                            style={{ 
+                                width: "100%",         // Fuerza a la imagen a estirarse
+                                maxWidth: "250px",     // (Opcional) Pon un límite para que no sea ETERNA en pantallas gigantes
+                                imageRendering: "pixelated" // ¡El truco para que Mario se vea nítido al estirarse!
+                            }}
+                            />                            <div className="mt-4">
                                 <a href="/" className=" btn btn-primary">Volver al Inicio</a>
                             </div>
                         </div>
